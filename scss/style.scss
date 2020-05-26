@@ -1,5 +1,102 @@
 @import "config";
-
 body {
-    background-color: $darkText;
+    background: radial-gradient(circle, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
+.scoreboard {
+    width: 90%;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    border: 2px solid hsl(217, 16%, 45%);
+    border-radius: 5px;
+    margin: 40px auto;
+    .rockpaperscissors {
+        margin: auto 18px;
+        b {
+            color: #fff;
+            display: block;
+            line-height: 14px;
+            font-size: 1.2rem;
+            margin: 0;
+            padding: 0;
+        }
+    }
+    .score {
+        justify-self: end;
+        width: 70px;
+        margin: 10px 4px;
+        background-color: #fff;
+        border-radius: 6px;
+        text-align: center;
+        padding: 8px;
+        font-size: 0.7rem;
+        color: hsl(229, 64%, 46%);
+        #score {
+            color: hsl(229, 25%, 31%);
+            font-size: 1.5rem;
+            margin: 13px 4px;
+        }
+    }
+}
+
+.rules {
+    text-align: center;
+    #rulesBtn {
+        border-radius: 8px;
+        background: none;
+        width: 160px;
+        padding: 13px;
+        border: 1px solid #fff;
+        color: #fff;
+        font-weight: 700;
+        font-size: 1.1rem;
+        outline: none;
+
+        &:hover {
+            background-color: #fff;
+            color: $darkText;
+        }
+    }
+}
+.modal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    visibility: hidden;
+    &-content {
+        background-color: #fff;
+        margin: 45px 0 35px 0;
+        padding: 17px 0;
+        border-radius: 5px;
+        width: 100%;
+        text-align: center;
+        #icon-close {
+            position: relative;
+            z-index: 99;
+            width: 22px;
+            margin: 0;
+            padding: 0;
+            top: 70vh;
+        }
+        .rules-title {
+            color: $darkText;
+            padding: 0;
+            font-size: 1.5rem;
+            margin: 0;
+        }
+        #img-rules {
+            margin-top: 80px;
+            width: 250px;
+            z-index: -1;
+            padding: 0;
+        }
+    }
+}
+
+.show-modal {
+    visibility: visible;
+}
+@import "media";
