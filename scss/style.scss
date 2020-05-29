@@ -1,8 +1,9 @@
 @import "config";
 body {
     background: radial-gradient(circle, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
-    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+    font-family: BarlowSemiCondensed;
 }
+
 .scoreboard {
     width: 90%;
     display: grid;
@@ -15,7 +16,7 @@ body {
         b {
             color: #fff;
             display: block;
-            line-height: 14px;
+            line-height: 17px;
             font-size: 1.2rem;
             margin: 0;
             padding: 0;
@@ -24,34 +25,76 @@ body {
     .score {
         justify-self: end;
         width: 70px;
-        margin: 10px 4px;
+        margin: 10px 8px;
         background-color: #fff;
         border-radius: 6px;
         text-align: center;
         padding: 8px;
-        font-size: 0.7rem;
+        font-size: 0.9rem;
+        letter-spacing: 3px;
+        font-weight: 600;
         color: hsl(229, 64%, 46%);
         #score {
             color: hsl(229, 25%, 31%);
-            font-size: 1.5rem;
-            margin: 13px 4px;
+            font-size: 2.8rem;
+            margin: 0 4px;
+            font-weight: 700;
         }
     }
 }
 
+.game-container {
+    .stage-1 {
+        // display: none;
+        background-image: url("../images/bg-triangle.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 300px;
+        height: 400px;
+        margin: 20px auto;
+        margin-top: 43px;
+        @include paper(100px);
+        @include scissors(100px);
+        @include rock(100px);
+    }
+
+    .stage-2 {
+        display: none;
+        .container {
+            margin: 12px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-items: center;
+            .user-selection {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+            }
+            .house-selection {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+            }
+        }
+    }
+}
+
+.text {
+    margin: 8px;
+}
 .rules {
     text-align: center;
     #rulesBtn {
         border-radius: 8px;
         background: none;
-        width: 160px;
-        padding: 13px;
+        width: 140px;
+        padding: 10px;
         border: 1px solid #fff;
         color: #fff;
         font-weight: 700;
         font-size: 1.1rem;
         outline: none;
-
         &:hover {
             background-color: #fff;
             color: $darkText;
@@ -95,8 +138,35 @@ body {
         }
     }
 }
-
+.paper-wrapper {
+    width: (80px + 20px);
+    height: (80px + 20px);
+    border-radius: 50%;
+    background: linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+    padding: 18px;
+    border-bottom: 8px solid hsl(230, 60%, 45%);
+    .paper {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background: white;
+        text-align: center;
+        padding: 10px;
+        border-top: 5px solid #ddd;
+        .paperImg {
+            margin-top: 8px;
+            margin-right: 4px;
+        }
+    }
+}
 .show-modal {
     visibility: visible;
+}
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
 }
 @import "media";

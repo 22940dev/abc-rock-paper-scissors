@@ -9,8 +9,77 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="css/style.css">
   <title>Frontend Mentor | Rock, Paper, Scissors</title>
+</head>
 
-  <!-- Score
+<body>
+  <div class="scoreboard">
+    <div class="rockpaperscissors">
+      <b>ROCK</b>
+      <b>PAPER</b>
+      <b>SCISSORS</b>
+    </div>
+    <div class="score">
+      SCORE
+      <p id="score">12</p>
+    </div>
+  </div>
+
+  <div class="game-container">
+    <div class="stage-1">
+      <div class="paper-wrapper" id="paper-click">
+        <div class="paper">
+          <img src="images/icon-paper.svg" alt="" id="paper">
+        </div>
+      </div>
+      <div class="scissors-wrapper" id="scissors-click">
+        <div class="scissors">
+          <img src="images/icon-scissors.svg" alt="" id="scissors">
+        </div>
+      </div>
+      <div class="rock-wrapper" id="rock-click">
+        <div class="rock">
+          <img src="images/icon-rock.svg" alt="" id="rock">
+        </div>
+      </div>
+    </div>
+    <div class="stage-2">
+      <div class="container">
+        <div class="user-selection">
+          <div class="wrapper">
+            <div class="weapon">
+              <img src="images/icon-scissors.svg" alt="" id="weaponImg" class="paperImg">
+            </div>
+          </div>
+          <div class="text">
+            YOU PICKED
+          </div>
+        </div>
+        <div class="house-selection">
+          <div class="unknown"></div>
+          <div class="text">
+            THE HOUSE PICKED
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal">
+    <div class="modal-content">
+      <h1 class="rules-title">RULES</h1>
+      <img src="images/icon-close.svg" alt="" id="icon-close">
+      <div><img src="images/image-rules.svg" alt="" id="img-rules"></div>
+    </div>
+  </div>
+  <div class="rules">
+    <button id="rulesBtn">RULES</button>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="game.js"></script>
+</body>
+
+</html>
+<!-- Score
   Rules
 
   You Picked
@@ -21,50 +90,7 @@
 
   Play Again -->
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution {
-      font-size: 11px;
-      text-align: center;
-    }
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }
-  </style>
-</head>
-
-<body>
-
-  <div class="scoreboard">
-    <div class="rockpaperscissors">
-      <b>ROCK</b>
-      <b>PAPER</b>
-      <b>SCISSORS</b>
-    </div>
-    <div class="score">
-      SCORE
-      <p id="score">0</p>
-    </div>
-  </div>
-
-  <div class="game-container">
-
-  </div>
-  <div class="rules">
-    <button id="rulesBtn">RULES</button>
-  </div>
-  <div class="modal">
-    <div class="modal-content">
-      <h1 class="rules-title">RULES</h1>
-      <img src="images/icon-close.svg" alt="" id="icon-close">
-      <div><img src="images/image-rules.svg" alt="" id="img-rules"></div>
-    </div>
-  </div>
-  <div class="attribution">
+<!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
-  </div>
-  <script src="script.js"></script>
-</body>
-
-</html>
+  </div> -->
