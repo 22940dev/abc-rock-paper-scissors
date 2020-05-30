@@ -180,148 +180,23 @@
             }
         }
     }
-}
 
-// for mobile devices
-@media screen and (max-width: 700px) {
     .game-container {
-        margin: 75px 0;
         .stage-1 {
             background-image: url("../images/bg-triangle.svg");
             background-repeat: no-repeat;
-            background-size: 220px;
-            height: auto;
-            margin: 45px auto 23px auto;
-            .paper-wrapper {
-                position: relative;
-                left: 12px;
-                top: 10px;
-                width: 70px;
-                height: 70px;
-                margin: 0;
-                border-radius: 50%;
-                background: linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
-                padding: 15px;
-                border-bottom: 8px solid hsl(230, 60%, 45%);
-                .paper {
-                    width: 50px;
-                    height: 50px;
-                    border-radius: 50%;
-                    background: white;
-                    text-align: center;
-                    padding: 10px;
-                    border-top: 5px solid #ddd;
-                    #paper {
-                        margin-top: -5px;
-                        margin-right: 2px;
-                        width: 85%;
-                    }
-                }
-            }
-            .scissors-wrapper {
-                position: relative;
-                left: 188px;
-                top: -98px;
-                width: 70px;
-                height: 70px;
-                margin: 0;
-                border-radius: 50%;
-                background: linear-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
-                padding: 15px;
-                border-bottom: 8px solid hsl(39, 97%, 39%);
-                .scissors {
-                    width: 50px;
-                    height: 50px;
-                    border-radius: 50%;
-                    background: white;
-                    text-align: center;
-                    padding: 10px;
-                    border-top: 5px solid #ddd;
-                    #scissors {
-                        margin-top: -3px;
-                        margin-right: 2px;
-                        width: 85%;
-                    }
-                }
-            }
-
-            .rock-wrapper {
-                position: relative;
-                left: 103px;
-                top: -48px;
-                width: 70px;
-                height: 70px;
-                margin: 0;
-                border-radius: 50%;
-                background: linear-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
-                padding: 15px;
-                border-bottom: 8px solid hsl(349, 73%, 39%);
-                .rock {
-                    width: 50px;
-                    height: 50px;
-                    border-radius: 50%;
-                    background: white;
-                    text-align: center;
-                    padding: 10px;
-                    border-top: 5px solid #ddd;
-                    #rock {
-                        margin-top: 2px;
-                        margin-right: 2px;
-                        width: 85%;
-                    }
-                }
-            }
-        }
-        .stage-2 {
-            display: none;
-            .container {
-                display: flex;
-                flex-wrap: nowrap;
-                flex-direction: column;
-                width: 100%;
-                .images {
-                    display: grid;
-                    grid-template-columns: 50% 50%;
-                    justify-content: center;
-                    align-content: center;
-                    align-items: center;
-                    justify-self: center;
-                    gap: 20px;
-                    .user-selection {
-                        margin: 12px auto;
-                        display: flex;
-                        flex-direction: column;
-                        flex-wrap: nowrap;
-                        text-align: center;
-                        align-items: center;
-                    }
-
-                    .house-selection {
-                        margin: auto;
-                        display: flex;
-                        flex-direction: column;
-                        flex-wrap: nowrap;
-                        text-align: center;
-                        align-items: center;
-                        margin-top: 12px;
-
-                        .unknown {
-                            justify-self: center;
-                            align-self: center;
-                        }
-                    }
-                }
-
-                .info {
-                    gap: 20px;
-                    display: grid;
-                    grid-template-columns: 50% 50%;
-                    justify-content: center;
-                }
-            }
+            background-position: center;
+            width: 300px;
+            height: 400px;
+            margin: 20px auto;
+            margin-top: 73px;
+            @include paper(100px);
+            @include scissors(100px);
+            @include rock(100px);
         }
     }
 }
+
 
 // for very small screens
 @media screen and (max-width: 300px) {
