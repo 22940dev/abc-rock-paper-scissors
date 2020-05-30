@@ -5,7 +5,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- displays site properly based on user's device -->
-
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="css/style.css">
   <title>Frontend Mentor | Rock, Paper, Scissors</title>
@@ -20,7 +19,7 @@
     </div>
     <div class="score">
       SCORE
-      <p id="score">12</p>
+      <div id="score">0</div>
     </div>
   </div>
 
@@ -44,18 +43,28 @@
     </div>
     <div class="stage-2">
       <div class="container">
-        <div class="user-selection">
-          <div class="wrapper">
-            <div class="weapon">
-              <img src="images/icon-scissors.svg" alt="" id="weaponImg" class="paperImg">
+        <div class="images">
+          <div class="user-selection">
+            <div class="wrapper">
+              <div class="weapon">
+                <img src="images/icon-scissors.svg" alt="" id="weaponImg">
+              </div>
+            </div>
+
+          </div>
+          <div class="house-selection">
+            <div class="unknown"></div>
+            <div class="house-wrapper">
+              <div class="house-weapon">
+                <img src="images/icon-scissors.svg" alt="" id="houseweaponImg">
+              </div>
             </div>
           </div>
+        </div>
+        <div class="info">
           <div class="text">
             YOU PICKED
           </div>
-        </div>
-        <div class="house-selection">
-          <div class="unknown"></div>
           <div class="text">
             THE HOUSE PICKED
           </div>
@@ -79,18 +88,3 @@
 </body>
 
 </html>
-<!-- Score
-  Rules
-
-  You Picked
-  The House Picked
-
-  You Win
-  You Lose
-
-  Play Again -->
-
-<!-- <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
-  </div> -->

@@ -2,9 +2,9 @@
 @media screen and (min-width: 700px) {
     .rules {
         text-align: none;
-        position: relative;
-        float: right;
-        bottom: 15px;
+        position: absolute;
+        right: 12px;
+        bottom: 25px;
         #rulesBtn {
             border-radius: 8px;
             background: none;
@@ -74,36 +74,119 @@
             b {
                 color: #fff;
                 display: block;
-                line-height: 19px;
-                font-size: 1.5rem;
+                line-height: 24px;
+                font-size: 1.8rem;
                 margin: 0;
                 padding: 0;
             }
         }
         .score {
             justify-self: end;
-            width: 70px;
-            margin: 10px 4px;
+            width: auto;
+            margin: 10px 16px;
             background-color: #fff;
             border-radius: 6px;
             text-align: center;
-            padding: 8px;
-            font-size: 0.7rem;
+            padding: 5px 17px;
+            font-size: 1.2rem;
             color: hsl(229, 64%, 46%);
             #score {
                 color: hsl(229, 25%, 31%);
-                font-size: 1.5rem;
-                margin: 13px 4px;
+                font-size: 3.8rem;
+                margin: 0 4px;
+            }
+        }
+    }
+
+    .text {
+        color: #fff;
+        font-weight: 600;
+        font-size: 1.2rem;
+        margin: 12px;
+        text-align: center;
+    }
+
+    .unknown {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background-color: #162138;
+    }
+
+    // size variable
+    $size: 120px;
+    .paper-wrapper {
+        width: ($size + 20px);
+        height: ($size + 20px);
+        border-radius: 50%;
+        background: linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+        padding: 18px;
+        border-bottom: 8px solid hsl(230, 60%, 45%);
+        .paper {
+            width: $size;
+            height: $size;
+            border-radius: 50%;
+            background: white;
+            text-align: center;
+            padding: 10px;
+            border-top: 5px solid #ddd;
+            .paperImg {
+                margin-top: 16px;
+                margin-right: 4px;
+            }
+        }
+    }
+
+    .scissors-wrapper {
+        width: ($size + 20px);
+        height: ($size + 20px);
+        border-radius: 50%;
+        background: linear-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+        padding: 18px;
+        border-bottom: 8px solid hsl(39, 97%, 39%);
+        .scissors {
+            width: $size;
+            height: $size;
+            border-radius: 50%;
+            background: white;
+            text-align: center;
+            padding: 10px;
+            border-top: 5px solid #ddd;
+            .scissorsImg {
+                margin-top: 18px;
+                margin-right: 0px;
+            }
+        }
+    }
+
+    .rock-wrapper {
+        width: ($size + 20px);
+        height: ($size + 20px);
+        border-radius: 50%;
+        background: linear-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+        padding: 18px;
+        border-bottom: 8px solid hsl(349, 73%, 39%);
+        .rock {
+            width: $size;
+            height: $size;
+            border-radius: 50%;
+            background: white;
+            text-align: center;
+            padding: 10px;
+            border-top: 5px solid #ddd;
+            .rockImg {
+                margin-top: 22px;
+                margin-right: 4px;
             }
         }
     }
 }
 
 // for mobile devices
-@media screen and (max-width: 465px) {
+@media screen and (max-width: 700px) {
     .game-container {
+        margin: 75px 0;
         .stage-1 {
-            // display: none;
             background-image: url("../images/bg-triangle.svg");
             background-repeat: no-repeat;
             background-size: 220px;
@@ -182,10 +265,58 @@
                     padding: 10px;
                     border-top: 5px solid #ddd;
                     #rock {
-                        margin-top: -2px;
+                        margin-top: 2px;
                         margin-right: 2px;
                         width: 85%;
                     }
+                }
+            }
+        }
+        .stage-2 {
+            display: none;
+            .container {
+                display: flex;
+                flex-wrap: nowrap;
+                flex-direction: column;
+                width: 100%;
+                .images {
+                    display: grid;
+                    grid-template-columns: 50% 50%;
+                    justify-content: center;
+                    align-content: center;
+                    align-items: center;
+                    justify-self: center;
+                    gap: 20px;
+                    .user-selection {
+                        margin: 12px auto;
+                        display: flex;
+                        flex-direction: column;
+                        flex-wrap: nowrap;
+                        text-align: center;
+                        align-items: center;
+                    }
+
+                    .house-selection {
+                        margin: auto;
+                        display: flex;
+                        flex-direction: column;
+                        flex-wrap: nowrap;
+                        text-align: center;
+                        align-items: center;
+                        margin-top: 12px;
+
+                        .unknown {
+                            justify-self: center;
+                            align-self: center;
+                        }
+                    }
+                }
+
+                .info {
+                    gap: 20px;
+                    display: grid;
+                    grid-template-columns: 50% 50%;
+                    justify-content: center;
                 }
             }
         }
@@ -193,7 +324,6 @@
 }
 
 // for very small screens
-
 @media screen and (max-width: 300px) {
     body {
         overflow-x: hidden;
@@ -206,6 +336,6 @@
         }
     }
     .rules {
-        margin-left: 6px;
+        margin-left: 18px;
     }
 }
