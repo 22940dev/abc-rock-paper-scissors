@@ -1,4 +1,4 @@
-// media query for larger screens
+// for larger screens
 @media screen and (min-width: 700px) {
     .rules {
         text-align: none;
@@ -197,12 +197,8 @@
     }
 }
 
-
 // for very small screens
 @media screen and (max-width: 300px) {
-    body {
-        overflow-x: hidden;
-    }
     .game-container {
         .stage-1 {
             background-size: 220px;

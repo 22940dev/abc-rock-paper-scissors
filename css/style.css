@@ -581,9 +581,6 @@ body {
 }
 
 @media screen and (max-width: 300px) {
-  body {
-    overflow-x: hidden;
-  }
   .game-container .stage-1 {
     background-size: 220px;
     height: auto;
