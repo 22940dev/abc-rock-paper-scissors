@@ -16,11 +16,11 @@ body {
     margin: 40px auto;
     .rockpaperscissors {
         margin: auto 18px;
-        b {
+        p {
             color: #fff;
-            display: block;
             line-height: 17px;
             font-size: 1.2rem;
+            font-weight: 900;
             margin: 0;
             padding: 0;
         }
@@ -46,6 +46,20 @@ body {
     }
 }
 
+// .game-container {
+//     .stage-1 {
+//         background-image: url("../images/bg-triangle.svg");
+//         background-repeat: no-repeat;
+//         background-position: center;
+//         width: 300px;
+//         height: 400px;
+//         margin: 20px auto;
+//         margin-top: 43px;
+//         @include paper(80px);
+//         @include scissors(80px);
+//         @include rock(80px);
+//     }
+// }
 .game-container {
     margin: 75px 0;
     .stage-1 {
@@ -53,22 +67,45 @@ body {
         background-repeat: no-repeat;
         background-size: 220px;
         background-position: center;
+<<<<<<< HEAD
         height: auto;
         margin: 45px auto 23px auto;
+=======
+        width: 300px;
+        height: 400px;
+        height: auto;
+        margin: 20px auto 0 auto;
+        margin-top: 5%;
+        $size: 55px;
+>>>>>>> core-game
         .paper-wrapper {
             position: relative;
             left: 12px;
             top: 10px;
+<<<<<<< HEAD
             width: 70px;
             height: 70px;
+=======
+            width: ($size + 20px);
+            height: ($size + 20px);
+>>>>>>> core-game
             margin: 0;
             border-radius: 50%;
             background: linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
             padding: 15px;
             border-bottom: 8px solid hsl(230, 60%, 45%);
+<<<<<<< HEAD
             .paper {
                 width: 50px;
                 height: 50px;
+=======
+            &:hover {
+                cursor: pointer;
+            }
+            .paper {
+                width: ($size);
+                height: ($size);
+>>>>>>> core-game
                 border-radius: 50%;
                 background: white;
                 text-align: center;
@@ -79,6 +116,7 @@ body {
                     margin-right: 2px;
                     width: 85%;
                 }
+<<<<<<< HEAD
             }
         }
         .scissors-wrapper {
@@ -121,13 +159,68 @@ body {
             .rock {
                 width: 50px;
                 height: 50px;
+=======
+            }
+        }
+        .scissors-wrapper {
+            position: relative;
+            left: 188px;
+            top: -105px;
+            width: ($size + 20px);
+            height: ($size + 20px);
+            margin: 0;
+            border-radius: 50%;
+            background: linear-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+            padding: 15px;
+            border-bottom: 8px solid hsl(39, 97%, 39%);
+            &:hover {
+                cursor: pointer;
+            }
+            .scissors {
+                width: ($size);
+                height: ($size);
+                border-radius: 50%;
+                background: white;
+                text-align: center;
+                padding: 10px;
+                border-top: 5px solid #ddd;
+                #scissors {
+                    margin-top: -3px;
+                    margin-right: 2px;
+                    width: 85%;
+                }
+            }
+        }
+
+        .rock-wrapper {
+            position: relative;
+            left: 95px;
+            top: -48px;
+            width: ($size + 20px);
+            height: ($size + 20px);
+            margin: 0;
+            border-radius: 50%;
+            background: linear-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+            padding: 15px;
+            border-bottom: 8px solid hsl(349, 73%, 39%);
+            &:hover {
+                cursor: pointer;
+            }
+            .rock {
+                width: ($size);
+                height: ($size);
+>>>>>>> core-game
                 border-radius: 50%;
                 background: white;
                 text-align: center;
                 padding: 10px;
                 border-top: 5px solid #ddd;
                 #rock {
+<<<<<<< HEAD
                     margin-top: 2px;
+=======
+                    margin-top: -2px;
+>>>>>>> core-game
                     margin-right: 2px;
                     width: 85%;
                 }
@@ -135,10 +228,19 @@ body {
         }
     }
 }
+<<<<<<< HEAD
 
 .rules {
     text-align: center;
     margin-bottom: 12px;
+=======
+.text {
+    margin: 8px;
+}
+.rules {
+    text-align: center;
+    margin-bottom: 20px;
+>>>>>>> core-game
     #rulesBtn {
         border-radius: 8px;
         background: none;

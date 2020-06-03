@@ -25,11 +25,11 @@ body {
   margin: auto 18px;
 }
 
-.scoreboard .rockpaperscissors b {
+.scoreboard .rockpaperscissors p {
   color: #fff;
-  display: block;
   line-height: 17px;
   font-size: 1.2rem;
+  font-weight: 900;
   margin: 0;
   padding: 0;
 }
@@ -65,16 +65,29 @@ body {
   background-repeat: no-repeat;
   background-size: 220px;
   background-position: center;
+<<<<<<< HEAD
   height: auto;
   margin: 45px auto 23px auto;
+=======
+  width: 300px;
+  height: 400px;
+  height: auto;
+  margin: 20px auto 0 auto;
+  margin-top: 5%;
+>>>>>>> core-game
 }
 
 .game-container .stage-1 .paper-wrapper {
   position: relative;
   left: 12px;
   top: 10px;
+<<<<<<< HEAD
   width: 70px;
   height: 70px;
+=======
+  width: 75px;
+  height: 75px;
+>>>>>>> core-game
   margin: 0;
   border-radius: 50%;
   background: -webkit-gradient(linear, left top, left bottom, from(#4865f4), to(#5671f5));
@@ -83,9 +96,18 @@ body {
   border-bottom: 8px solid #2e45b8;
 }
 
+.game-container .stage-1 .paper-wrapper:hover {
+  cursor: pointer;
+}
+
 .game-container .stage-1 .paper-wrapper .paper {
+<<<<<<< HEAD
   width: 50px;
   height: 50px;
+=======
+  width: 55px;
+  height: 55px;
+>>>>>>> core-game
   border-radius: 50%;
   background: white;
   text-align: center;
@@ -102,9 +124,15 @@ body {
 .game-container .stage-1 .scissors-wrapper {
   position: relative;
   left: 188px;
+<<<<<<< HEAD
   top: -98px;
   width: 70px;
   height: 70px;
+=======
+  top: -105px;
+  width: 75px;
+  height: 75px;
+>>>>>>> core-game
   margin: 0;
   border-radius: 50%;
   background: -webkit-gradient(linear, left top, left bottom, from(#ec9e0e), to(#eca922));
@@ -113,9 +141,18 @@ body {
   border-bottom: 8px solid #c48003;
 }
 
+.game-container .stage-1 .scissors-wrapper:hover {
+  cursor: pointer;
+}
+
 .game-container .stage-1 .scissors-wrapper .scissors {
+<<<<<<< HEAD
   width: 50px;
   height: 50px;
+=======
+  width: 55px;
+  height: 55px;
+>>>>>>> core-game
   border-radius: 50%;
   background: white;
   text-align: center;
@@ -131,10 +168,17 @@ body {
 
 .game-container .stage-1 .rock-wrapper {
   position: relative;
+<<<<<<< HEAD
   left: 103px;
   top: -48px;
   width: 70px;
   height: 70px;
+=======
+  left: 95px;
+  top: -48px;
+  width: 75px;
+  height: 75px;
+>>>>>>> core-game
   margin: 0;
   border-radius: 50%;
   background: -webkit-gradient(linear, left top, left bottom, from(#dc2e4e), to(#dd405d));
@@ -143,9 +187,18 @@ body {
   border-bottom: 8px solid #ac1b35;
 }
 
+.game-container .stage-1 .rock-wrapper:hover {
+  cursor: pointer;
+}
+
 .game-container .stage-1 .rock-wrapper .rock {
+<<<<<<< HEAD
   width: 50px;
   height: 50px;
+=======
+  width: 55px;
+  height: 55px;
+>>>>>>> core-game
   border-radius: 50%;
   background: white;
   text-align: center;
@@ -154,14 +207,28 @@ body {
 }
 
 .game-container .stage-1 .rock-wrapper .rock #rock {
+<<<<<<< HEAD
   margin-top: 2px;
+  margin-right: 2px;
+  width: 85%;
+=======
+  margin-top: -2px;
   margin-right: 2px;
   width: 85%;
 }
 
+.text {
+  margin: 8px;
+>>>>>>> core-game
+}
+
 .rules {
   text-align: center;
+<<<<<<< HEAD
   margin-bottom: 12px;
+=======
+  margin-bottom: 20px;
+>>>>>>> core-game
 }
 
 .rules #rulesBtn {
@@ -316,7 +383,11 @@ body {
 @media screen and (min-width: 700px) {
   .rules {
     text-align: none;
+<<<<<<< HEAD
     position: absolute;
+=======
+    position: fixed;
+>>>>>>> core-game
     right: 12px;
     bottom: 25px;
   }
@@ -335,6 +406,7 @@ body {
     background-color: #fff;
     color: #3b4363;
     background: line;
+    cursor: pointer;
   }
   .modal {
     position: fixed;
@@ -424,6 +496,7 @@ body {
     height: 150px;
     border-radius: 50%;
     background-color: #162138;
+<<<<<<< HEAD
   }
   .paper-wrapper {
     width: 140px;
@@ -490,23 +563,40 @@ body {
   .rock-wrapper .rock .rockImg {
     margin-top: 22px;
     margin-right: 4px;
+=======
+>>>>>>> core-game
   }
   .game-container .stage-1 {
     background-image: url("../images/bg-triangle.svg");
     background-repeat: no-repeat;
     background-position: center;
+<<<<<<< HEAD
     width: 300px;
     height: 400px;
     margin: 20px auto;
     margin-top: 73px;
+=======
+    background-size: 320px 290px;
+    width: 300px;
+    height: 400px;
+    margin: 20px auto 0 auto;
+    margin-top: 5%;
+>>>>>>> core-game
   }
   .game-container .stage-1 .paper-wrapper {
     cursor: pointer;
     position: relative;
+<<<<<<< HEAD
     left: -48px;
     top: -28px;
     width: 120px;
     height: 120px;
+=======
+    left: -68px;
+    top: -28px;
+    width: 140px;
+    height: 140px;
+>>>>>>> core-game
     border-radius: 50%;
     background: -webkit-gradient(linear, left top, left bottom, from(#4865f4), to(#5671f5));
     background: linear-gradient(#4865f4, #5671f5);
@@ -514,8 +604,13 @@ body {
     border-bottom: 8px solid #2e45b8;
   }
   .game-container .stage-1 .paper-wrapper .paper {
+<<<<<<< HEAD
     width: 100px;
     height: 100px;
+=======
+    width: 120px;
+    height: 120px;
+>>>>>>> core-game
     border-radius: 50%;
     background: white;
     text-align: center;
@@ -525,14 +620,25 @@ body {
   .game-container .stage-1 .paper-wrapper .paper #paper {
     margin-top: 18px;
     margin-right: 4px;
+<<<<<<< HEAD
+=======
+    width: 50%;
+>>>>>>> core-game
   }
   .game-container .stage-1 .scissors-wrapper {
     cursor: pointer;
     position: relative;
+<<<<<<< HEAD
     left: 190px;
     top: -196px;
     width: 120px;
     height: 120px;
+=======
+    left: 200px;
+    top: -210px;
+    width: 140px;
+    height: 140px;
+>>>>>>> core-game
     border-radius: 50%;
     background: -webkit-gradient(linear, left top, left bottom, from(#ec9e0e), to(#eca922));
     background: linear-gradient(#ec9e0e, #eca922);
@@ -540,8 +646,13 @@ body {
     border-bottom: 8px solid #c48003;
   }
   .game-container .stage-1 .scissors-wrapper .scissors {
+<<<<<<< HEAD
     width: 100px;
     height: 100px;
+=======
+    width: 120px;
+    height: 120px;
+>>>>>>> core-game
     border-radius: 50%;
     background: white;
     text-align: center;
@@ -551,6 +662,7 @@ body {
   .game-container .stage-1 .scissors-wrapper .scissors #scissors {
     margin-top: 18px;
     margin-right: 4px;
+<<<<<<< HEAD
   }
   .game-container .stage-1 .rock-wrapper {
     position: relative;
@@ -559,6 +671,16 @@ body {
     cursor: pointer;
     width: 120px;
     height: 120px;
+=======
+    width: 50%;
+  }
+  .game-container .stage-1 .rock-wrapper {
+    position: relative;
+    left: 60px;
+    top: -165px;
+    width: 140px;
+    height: 140px;
+>>>>>>> core-game
     border-radius: 50%;
     background: -webkit-gradient(linear, left top, left bottom, from(#dc2e4e), to(#dd405d));
     background: linear-gradient(#dc2e4e, #dd405d);
@@ -566,8 +688,13 @@ body {
     border-bottom: 8px solid #ac1b35;
   }
   .game-container .stage-1 .rock-wrapper .rock {
+<<<<<<< HEAD
     width: 100px;
     height: 100px;
+=======
+    width: 120px;
+    height: 120px;
+>>>>>>> core-game
     border-radius: 50%;
     background: white;
     text-align: center;
@@ -575,8 +702,14 @@ body {
     border-top: 5px solid #ddd;
   }
   .game-container .stage-1 .rock-wrapper .rock #rock {
+<<<<<<< HEAD
     margin-top: 22px;
     margin-right: 4px;
+=======
+    margin-top: 28px;
+    margin-right: 4px;
+    width: 50%;
+>>>>>>> core-game
   }
 }
 
@@ -584,10 +717,14 @@ body {
   .game-container .stage-1 {
     background-size: 220px;
     height: auto;
-    margin: -8px;
+    margin: 0px;
   }
   .rules {
+<<<<<<< HEAD
     margin-left: 18px;
+=======
+    margin-left: 10px;
+>>>>>>> core-game
   }
 }
 /*# sourceMappingURL=style.css.map */

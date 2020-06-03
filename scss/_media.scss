@@ -2,7 +2,11 @@
 @media screen and (min-width: 700px) {
     .rules {
         text-align: none;
+<<<<<<< HEAD
         position: absolute;
+=======
+        position: fixed;
+>>>>>>> core-game
         right: 12px;
         bottom: 25px;
         #rulesBtn {
@@ -20,6 +24,7 @@
                 background-color: #fff;
                 color: $darkText;
                 background: line;
+                cursor: pointer;
             }
         }
     }
@@ -115,6 +120,7 @@
 
     // size variable
     $size: 120px;
+<<<<<<< HEAD
     .paper-wrapper {
         width: ($size + 20px);
         height: ($size + 20px);
@@ -177,6 +183,92 @@
             .rockImg {
                 margin-top: 22px;
                 margin-right: 4px;
+=======
+    .game-container {
+        .stage-1 {
+            background-image: url("../images/bg-triangle.svg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 320px 290px;
+            width: 300px;
+            height: 400px;
+            margin: 20px auto 0 auto;
+            margin-top: 5%;
+            .paper-wrapper {
+                position: relative;
+                left: -68px;
+                top: -28px;
+                width: ($size + 20px);
+                height: ($size + 20px);
+                border-radius: 50%;
+                background: linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+                padding: 18px;
+                border-bottom: 8px solid hsl(230, 60%, 45%);
+                .paper {
+                    width: $size;
+                    height: $size;
+                    border-radius: 50%;
+                    background: white;
+                    text-align: center;
+                    padding: 10px;
+                    border-top: 5px solid #ddd;
+                    #paper {
+                        margin-top: 18px;
+                        margin-right: 4px;
+                        width: 50%;
+                    }
+                }
+            }
+            .scissors-wrapper {
+                position: relative;
+                left: 200px;
+                top: -210px;
+                width: ($size + 20px);
+                height: ($size + 20px);
+                border-radius: 50%;
+                background: linear-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+                padding: 18px;
+                border-bottom: 8px solid hsl(39, 97%, 39%);
+                .scissors {
+                    width: $size;
+                    height: $size;
+                    border-radius: 50%;
+                    background: white;
+                    text-align: center;
+                    padding: 10px;
+                    border-top: 5px solid #ddd;
+                    #scissors {
+                        margin-top: 18px;
+                        margin-right: 4px;
+                        width: 50%;
+                    }
+                }
+            }
+            .rock-wrapper {
+                position: relative;
+                left: 60px;
+                top: -165px;
+                width: ($size + 20px);
+                height: ($size + 20px);
+                border-radius: 50%;
+                background: linear-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+                padding: 18px;
+                border-bottom: 8px solid hsl(349, 73%, 39%);
+                .rock {
+                    width: $size;
+                    height: $size;
+                    border-radius: 50%;
+                    background: white;
+                    text-align: center;
+                    padding: 10px;
+                    border-top: 5px solid #ddd;
+                    #rock {
+                        margin-top: 28px;
+                        margin-right: 4px;
+                        width: 50%;
+                    }
+                }
+>>>>>>> core-game
             }
         }
     }
@@ -203,10 +295,14 @@
         .stage-1 {
             background-size: 220px;
             height: auto;
-            margin: -8px;
+            margin: 0px;
         }
     }
     .rules {
+<<<<<<< HEAD
         margin-left: 18px;
+=======
+        margin-left: 10px;
+>>>>>>> core-game
     }
 }
