@@ -1,10 +1,10 @@
-// media query for larger screens
+// for larger screens
 @media screen and (min-width: 700px) {
     .rules {
         text-align: none;
-        position: relative;
-        float: right;
-        bottom: 15px;
+        position: fixed;
+        right: 12px;
+        bottom: 25px;
         #rulesBtn {
             border-radius: 8px;
             background: none;
@@ -20,6 +20,7 @@
                 background-color: #fff;
                 color: $darkText;
                 background: line;
+                cursor: pointer;
             }
         }
     }
@@ -74,117 +75,129 @@
             b {
                 color: #fff;
                 display: block;
-                line-height: 19px;
-                font-size: 1.5rem;
+                line-height: 24px;
+                font-size: 1.8rem;
                 margin: 0;
                 padding: 0;
             }
         }
         .score {
             justify-self: end;
-            width: 70px;
-            margin: 10px 4px;
+            width: auto;
+            margin: 10px 16px;
             background-color: #fff;
             border-radius: 6px;
             text-align: center;
-            padding: 8px;
-            font-size: 0.7rem;
+            padding: 5px 17px;
+            font-size: 1.2rem;
             color: hsl(229, 64%, 46%);
             #score {
                 color: hsl(229, 25%, 31%);
-                font-size: 1.5rem;
-                margin: 13px 4px;
+                font-size: 3.8rem;
+                margin: 0 4px;
             }
         }
     }
-}
 
-// for mobile devices
-@media screen and (max-width: 465px) {
+    .text {
+        color: #fff;
+        font-weight: 600;
+        font-size: 1.2rem;
+        margin: 12px;
+        text-align: center;
+    }
+
+    .unknown {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background-color: #162138;
+    }
+
+    // size variable
+    $size: 120px;
     .game-container {
         .stage-1 {
-            // display: none;
             background-image: url("../images/bg-triangle.svg");
             background-repeat: no-repeat;
-            background-size: 220px;
-            height: auto;
-            margin: 45px auto 23px auto;
+            background-position: center;
+            background-size: 320px 290px;
+            width: 300px;
+            height: 400px;
+            margin: 20px auto 0 auto;
+            margin-top: 5%;
             .paper-wrapper {
                 position: relative;
-                left: 12px;
-                top: 10px;
-                width: 70px;
-                height: 70px;
-                margin: 0;
+                left: -68px;
+                top: -28px;
+                width: ($size + 20px);
+                height: ($size + 20px);
                 border-radius: 50%;
                 background: linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
-                padding: 15px;
+                padding: 18px;
                 border-bottom: 8px solid hsl(230, 60%, 45%);
                 .paper {
-                    width: 50px;
-                    height: 50px;
+                    width: $size;
+                    height: $size;
                     border-radius: 50%;
                     background: white;
                     text-align: center;
                     padding: 10px;
                     border-top: 5px solid #ddd;
                     #paper {
-                        margin-top: -5px;
-                        margin-right: 2px;
-                        width: 85%;
+                        margin-top: 18px;
+                        margin-right: 4px;
+                        width: 50%;
                     }
                 }
             }
             .scissors-wrapper {
                 position: relative;
-                left: 188px;
-                top: -98px;
-                width: 70px;
-                height: 70px;
-                margin: 0;
+                left: 200px;
+                top: -210px;
+                width: ($size + 20px);
+                height: ($size + 20px);
                 border-radius: 50%;
                 background: linear-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
-                padding: 15px;
+                padding: 18px;
                 border-bottom: 8px solid hsl(39, 97%, 39%);
                 .scissors {
-                    width: 50px;
-                    height: 50px;
+                    width: $size;
+                    height: $size;
                     border-radius: 50%;
                     background: white;
                     text-align: center;
                     padding: 10px;
                     border-top: 5px solid #ddd;
                     #scissors {
-                        margin-top: -3px;
-                        margin-right: 2px;
-                        width: 85%;
+                        margin-top: 18px;
+                        margin-right: 4px;
+                        width: 50%;
                     }
                 }
             }
-
             .rock-wrapper {
                 position: relative;
-                left: 103px;
-                top: -48px;
-                width: 70px;
-                height: 70px;
-                margin: 0;
+                left: 60px;
+                top: -165px;
+                width: ($size + 20px);
+                height: ($size + 20px);
                 border-radius: 50%;
                 background: linear-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
-                padding: 15px;
+                padding: 18px;
                 border-bottom: 8px solid hsl(349, 73%, 39%);
                 .rock {
-                    width: 50px;
-                    height: 50px;
+                    width: $size;
+                    height: $size;
                     border-radius: 50%;
                     background: white;
                     text-align: center;
                     padding: 10px;
                     border-top: 5px solid #ddd;
                     #rock {
-                        margin-top: -2px;
-                        margin-right: 2px;
-                        width: 85%;
+                        margin-top: 28px;
+                        margin-right: 4px;
+                        width: 50%;
                     }
                 }
             }
@@ -193,19 +206,15 @@
 }
 
 // for very small screens
-
 @media screen and (max-width: 300px) {
-    body {
-        overflow-x: hidden;
-    }
     .game-container {
         .stage-1 {
             background-size: 220px;
             height: auto;
-            margin: -8px;
+            margin: 0px;
         }
     }
     .rules {
-        margin-left: 6px;
+        margin-left: 10px;
     }
 }
