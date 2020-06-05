@@ -1,33 +1,182 @@
-// for larger screens
-@media screen and (min-width: 700px) {
-    .rules {
-        text-align: none;
-<<<<<<< HEAD
-        position: absolute;
-=======
-        position: fixed;
->>>>>>> core-game
-        right: 12px;
-        bottom: 25px;
-        #rulesBtn {
-            border-radius: 8px;
-            background: none;
-            width: 160px;
-            padding: 8px;
-            border: 1px solid #fff;
-            color: #fff;
-            font-weight: 700;
-            font-size: 1.1rem;
-            outline: none;
+@media screen and (max-width: 635px) {
+    $size: 90px;
+    @include scissors($size, 10px);
+    @include paper($size, 10px);
+    @include rock($size, 10px);
+    .game-container {
+        margin-top: 54px;
+        .step-2-3-4 {
+            justify-content: space-around;
+            .user-selection {
+                display: flex;
+                flex-flow: column nowrap;
+                text-align: center;
+                align-items: center;
+                order: 1;
+                .text {
+                    text-align: center;
+                    color: #fff;
+                    font-size: 1.1rem;
+                    font-weight: 700;
+                    order: 2;
+                }
+            }
+            .lose-win {
+                text-align: center;
+                order: 3;
+                margin: 50px 0 52px 0;
+                align-self: center;
+                .outcome {
+                    text-transform: uppercase;
+                    color: #fff;
+                    font-weight: 700;
+                    font-size: 3.4rem;
+                    width: 300px;
+                    letter-spacing: 0.2rem;
+                    margin: 12px;
+                }
+                #playAgain {
+                    padding: 18px;
+                    width: 220px;
+                    border-radius: 4px;
+                    background-color: #fff;
+                    color: $darkText;
+                    border: none;
+                    outline: none;
+                    font-weight: 600;
+                    font-size: 1.2rem;
+                }
+            }
 
-            &:hover {
-                background-color: #fff;
-                color: $darkText;
-                background: line;
-                cursor: pointer;
+            .house-selection {
+                display: flex;
+                flex-flow: column nowrap;
+                text-align: center;
+                align-items: center;
+                text-align: center;
+                order: 2;
+                .text {
+                    text-align: center;
+                    color: #fff;
+                    font-size: 1.1rem;
+                    font-weight: 700;
+                }
+                .unknown {
+                    background-color: hsl(237, 49%, 15%);
+                    width: 120px;
+                    height: 120px;
+                    border-radius: 50%;
+                    margin: auto;
+                }
             }
         }
     }
+}
+@media screen and (min-width: 636px) {
+    .game-container .step-2-3-4 .lose-win {
+        text-align: center;
+        order: 2;
+        margin: 0px 0 52px 0;
+        align-self: center;
+    }
+    .game-container {
+        .step-1 {
+            background-image: url("../images/bg-triangle.svg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 290px 290px;
+            width: 300px;
+            height: 400px;
+            margin: 20px auto 0 auto;
+            margin-top: 5%;
+            $size: 100px;
+            .paper-wrapper {
+                position: relative;
+                left: -60px;
+                top: -28px;
+                width: ($size + 20px);
+                height: ($size + 20px);
+                border-radius: 50%;
+                background: linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+                padding: 18px;
+                border-bottom: 8px solid hsl(230, 60%, 45%);
+                .paper {
+                    width: $size;
+                    height: $size;
+                    border-radius: 50%;
+                    background: white;
+                    text-align: center;
+                    padding: 10px;
+                    border-top: 5px solid #ddd;
+                    #paper {
+                        margin: 18px auto;
+                        width: 50%;
+                    }
+                }
+            }
+            .scissors-wrapper {
+                position: relative;
+                left: 200px;
+                top: -190px;
+                width: ($size + 20px);
+                height: ($size + 20px);
+                border-radius: 50%;
+                background: linear-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+                padding: 18px;
+                border-bottom: 8px solid hsl(39, 97%, 39%);
+                .scissors {
+                    width: $size;
+                    height: $size;
+                    border-radius: 50%;
+                    background: white;
+                    text-align: center;
+                    padding: 10px;
+                    border-top: 5px solid #ddd;
+                    #scissors {
+                        margin: 18px auto;
+                        width: 50%;
+                    }
+                }
+            }
+            .rock-wrapper {
+                position: relative;
+                left: 70px;
+                top: -150px;
+                width: ($size + 20px);
+                height: ($size + 20px);
+                border-radius: 50%;
+                background: linear-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+                padding: 18px;
+                border-bottom: 8px solid hsl(349, 73%, 39%);
+                .rock {
+                    width: $size;
+                    height: $size;
+                    border-radius: 50%;
+                    background: white;
+                    text-align: center;
+                    padding: 10px;
+                    border-top: 5px solid #ddd;
+                    #rock {
+                        margin: 26px auto;
+                        width: 50%;
+                    }
+                }
+            }
+        }
+        .step-2-3-4 {
+            .house-selection {
+                justify-content: start;
+                .unknown {
+                    width: 150px;
+                    height: 150px;
+                    margin: 13px auto;
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: 720px) {
     .modal {
         position: fixed;
         width: 100%;
@@ -67,6 +216,31 @@
         }
     }
 
+    .rules {
+        text-align: none;
+        position: relative;
+        right: 22px;
+        bottom: 15px;
+        float: right;
+        #rulesBtn {
+            border-radius: 8px;
+            background: none;
+            width: 160px;
+            padding: 8px;
+            border: 1px solid #fff;
+            color: #fff;
+            font-weight: 700;
+            font-size: 1.1rem;
+            outline: none;
+
+            &:hover {
+                background-color: #fff;
+                color: $darkText;
+                background: line;
+                cursor: pointer;
+            }
+        }
+    }
     .scoreboard {
         width: 50%;
         display: grid;
@@ -76,7 +250,7 @@
         margin: 40px auto;
         .rockpaperscissors {
             margin: auto 18px;
-            b {
+            p {
                 color: #fff;
                 display: block;
                 line-height: 24px;
@@ -102,90 +276,16 @@
             }
         }
     }
-
-    .text {
-        color: #fff;
-        font-weight: 600;
-        font-size: 1.2rem;
-        margin: 12px;
-        text-align: center;
-    }
-
-    .unknown {
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
-        background-color: #162138;
-    }
-
-    // size variable
     $size: 120px;
-<<<<<<< HEAD
-    .paper-wrapper {
-        width: ($size + 20px);
-        height: ($size + 20px);
-        border-radius: 50%;
-        background: linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
-        padding: 18px;
-        border-bottom: 8px solid hsl(230, 60%, 45%);
-        .paper {
-            width: $size;
-            height: $size;
-            border-radius: 50%;
-            background: white;
-            text-align: center;
-            padding: 10px;
-            border-top: 5px solid #ddd;
-            .paperImg {
-                margin-top: 16px;
-                margin-right: 4px;
-            }
-        }
-    }
-
-    .scissors-wrapper {
-        width: ($size + 20px);
-        height: ($size + 20px);
-        border-radius: 50%;
-        background: linear-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
-        padding: 18px;
-        border-bottom: 8px solid hsl(39, 97%, 39%);
-        .scissors {
-            width: $size;
-            height: $size;
-            border-radius: 50%;
-            background: white;
-            text-align: center;
-            padding: 10px;
-            border-top: 5px solid #ddd;
-            .scissorsImg {
-                margin-top: 18px;
-                margin-right: 0px;
-            }
-        }
-    }
-
-    .rock-wrapper {
-        width: ($size + 20px);
-        height: ($size + 20px);
-        border-radius: 50%;
-        background: linear-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
-        padding: 18px;
-        border-bottom: 8px solid hsl(349, 73%, 39%);
-        .rock {
-            width: $size;
-            height: $size;
-            border-radius: 50%;
-            background: white;
-            text-align: center;
-            padding: 10px;
-            border-top: 5px solid #ddd;
-            .rockImg {
-                margin-top: 22px;
-                margin-right: 4px;
-=======
+    @include scissors($size, 23px);
+    @include paper($size, 20px);
+    @include rock($size, 20px);
     .game-container {
-        .stage-1 {
+        // size variable
+        $size: 120px;
+        margin-top: 64px;
+        margin-bottom: 75px;
+        .step-1 {
             background-image: url("../images/bg-triangle.svg");
             background-repeat: no-repeat;
             background-position: center;
@@ -213,8 +313,7 @@
                     padding: 10px;
                     border-top: 5px solid #ddd;
                     #paper {
-                        margin-top: 18px;
-                        margin-right: 4px;
+                        margin: 18px auto;
                         width: 50%;
                     }
                 }
@@ -238,8 +337,7 @@
                     padding: 10px;
                     border-top: 5px solid #ddd;
                     #scissors {
-                        margin-top: 18px;
-                        margin-right: 4px;
+                        margin: 18px auto;
                         width: 50%;
                     }
                 }
@@ -263,46 +361,311 @@
                     padding: 10px;
                     border-top: 5px solid #ddd;
                     #rock {
-                        margin-top: 28px;
-                        margin-right: 4px;
+                        margin: 26px auto;
                         width: 50%;
                     }
                 }
->>>>>>> core-game
+            }
+        }
+        .step-2-3-4 {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-evenly;
+            margin: 12px;
+            .user-selection {
+                order: 1;
+                display: flex;
+                flex-flow: column nowrap;
+                align-items: center;
+                .wrapper {
+                    order: 1;
+                }
+                .text {
+                    text-align: center;
+                    color: #fff;
+                    font-size: 1.4rem;
+                    font-weight: 700;
+                    order: 0;
+                    margin-bottom: 43px;
+                }
+            }
+            .lose-win {
+                text-align: center;
+                order: 2;
+                margin-top: 32px;
+                align-self: center;
+                .outcome {
+                    text-transform: uppercase;
+                    color: #fff;
+                    font-weight: 700;
+                    font-size: 3.4rem;
+                    width: 300px;
+                    letter-spacing: 0.2rem;
+                }
+                #playAgain {
+                    padding: 18px;
+                    width: 220px;
+                    border-radius: 4px;
+                    background-color: #fff;
+                    color: $darkText;
+                    border: none;
+                    outline: none;
+                    font-weight: 600;
+                    font-size: 1.2rem;
+                    cursor: pointer;
+                }
+            }
+
+            .house-selection {
+                order: 3;
+                display: flex;
+                flex-flow: column nowrap;
+                text-align: center;
+                align-items: center;
+                justify-content: center;
+                .text {
+                    text-align: center;
+                    color: #fff;
+                    font-size: 1.4rem;
+                    font-weight: 700;
+                    order: 0;
+                    margin-bottom: 44px;
+                }
+                .wrapper {
+                    order: 1;
+                }
+                .unknown {
+                    background-color: hsl(237, 49%, 15%);
+                    width: 160px;
+                    height: 160px;
+                    border-radius: 50%;
+                    margin: 12px auto;
+                    order: 1;
+                }
             }
         }
     }
+}
+@media screen and (min-width: 1000px) {
+    $size: 160px;
+    @include scissors($size, 33px);
+    @include paper($size, 30px);
+    @include rock($size, 20px);
 
     .game-container {
-        .stage-1 {
+        // size variable
+        $size: 120px;
+        margin-top: 64px;
+        margin-bottom: 45px;
+        .step-1 {
             background-image: url("../images/bg-triangle.svg");
             background-repeat: no-repeat;
             background-position: center;
+            background-size: 320px 290px;
             width: 300px;
             height: 400px;
-            margin: 20px auto;
-            margin-top: 73px;
-            @include paper(100px);
-            @include scissors(100px);
-            @include rock(100px);
+            margin: 20px auto 0 auto;
+            margin-top: 5%;
+            .paper-wrapper {
+                position: relative;
+                left: -68px;
+                top: -28px;
+                width: ($size + 20px);
+                height: ($size + 20px);
+                border-radius: 50%;
+                background: linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+                padding: 18px;
+                border-bottom: 8px solid hsl(230, 60%, 45%);
+                .paper {
+                    width: $size;
+                    height: $size;
+                    border-radius: 50%;
+                    background: white;
+                    text-align: center;
+                    padding: 10px;
+                    border-top: 5px solid #ddd;
+                    #paper {
+                        margin: 18px auto;
+                        width: 50%;
+                    }
+                }
+            }
+            .scissors-wrapper {
+                position: relative;
+                left: 200px;
+                top: -210px;
+                width: ($size + 20px);
+                height: ($size + 20px);
+                border-radius: 50%;
+                background: linear-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+                padding: 18px;
+                border-bottom: 8px solid hsl(39, 97%, 39%);
+                .scissors {
+                    width: $size;
+                    height: $size;
+                    border-radius: 50%;
+                    background: white;
+                    text-align: center;
+                    padding: 10px;
+                    border-top: 5px solid #ddd;
+                    #scissors {
+                        margin: 18px auto;
+                        width: 50%;
+                    }
+                }
+            }
+            .rock-wrapper {
+                position: relative;
+                left: 60px;
+                top: -165px;
+                width: ($size + 20px);
+                height: ($size + 20px);
+                border-radius: 50%;
+                background: linear-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+                padding: 18px;
+                border-bottom: 8px solid hsl(349, 73%, 39%);
+                .rock {
+                    width: $size;
+                    height: $size;
+                    border-radius: 50%;
+                    background: white;
+                    text-align: center;
+                    padding: 10px;
+                    border-top: 5px solid #ddd;
+                    #rock {
+                        margin: 26px auto;
+                        width: 50%;
+                    }
+                }
+            }
+        }
+
+        .step-2-3-4 {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-evenly;
+            .user-selection {
+                order: 1;
+                display: flex;
+                flex-flow: column nowrap;
+                .wrapper {
+                    order: 1;
+                }
+                .text {
+                    text-align: center;
+                    color: #fff;
+                    font-size: 1.6rem;
+                    font-weight: 700;
+                    order: 0;
+                    margin-bottom: 43px;
+                }
+            }
+            .lose-win {
+                text-align: center;
+                order: 2;
+                align-self: center;
+                .outcome {
+                    text-transform: uppercase;
+                    color: #fff;
+                    font-weight: 700;
+                    font-size: 3.4rem;
+                    width: 300px;
+                    letter-spacing: 0.2rem;
+                }
+                #playAgain {
+                    padding: 18px;
+                    width: 220px;
+                    border-radius: 4px;
+                    background-color: #fff;
+                    color: $darkText;
+                    border: none;
+                    outline: none;
+                    font-weight: 600;
+                    font-size: 1.2rem;
+                    cursor: pointer;
+                }
+            }
+
+            .house-selection {
+                order: 3;
+                display: flex;
+                flex-flow: column nowrap;
+                text-align: center;
+                justify-content: start;
+                .text {
+                    text-align: center;
+                    color: #fff;
+                    font-size: 1.6rem;
+                    font-weight: 700;
+                    order: 0;
+                    margin-bottom: 44px;
+                }
+                .wrapper {
+                    order: 1;
+                }
+                .unknown {
+                    background-color: hsl(237, 49%, 15%);
+                    width: 200px;
+                    height: 200px;
+                    border-radius: 50%;
+                    margin: 0 auto 0 auto;
+                    order: 1;
+                }
+            }
         }
     }
 }
+// for larger screens
+@media screen and (min-width: 1300px) {
+    .rules {
+        text-align: none;
+        position: fixed;
+        right: 22px;
+        bottom: 10px;
+        #rulesBtn {
+            border-radius: 8px;
+            background: none;
+            width: 160px;
+            padding: 8px;
+            border: 1px solid #fff;
+            color: #fff;
+            font-weight: 700;
+            font-size: 1.1rem;
+            outline: none;
 
+            &:hover {
+                background-color: #fff;
+                color: $darkText;
+                background: line;
+                cursor: pointer;
+            }
+        }
+    }
+}
 // for very small screens
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 330px) {
+    $size: 65px;
+    @include scissors($size, 8px);
+    @include paper($size, 5px);
+    @include rock($size, 4px);
     .game-container {
-        .stage-1 {
+        .step-1 {
             background-size: 220px;
             height: auto;
-            margin: 0px;
+            margin: 0;
+        }
+        .step-2-3-4 {
+            .house-selection {
+                justify-content: start;
+                .unknown {
+                    width: 110px;
+                    height: 110px;
+                    margin: 10px auto;
+                }
+            }
         }
     }
     .rules {
-<<<<<<< HEAD
-        margin-left: 18px;
-=======
         margin-left: 10px;
->>>>>>> core-game
     }
 }

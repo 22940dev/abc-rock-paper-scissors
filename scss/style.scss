@@ -1,12 +1,11 @@
-// default styles for mobile
 @import "config";
+
 body {
     background: radial-gradient(circle, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
     font-family: BarlowSemiCondensed;
     margin: 0;
     padding: 0;
 }
-
 .scoreboard {
     width: 90%;
     display: grid;
@@ -18,16 +17,17 @@ body {
         margin: auto 18px;
         p {
             color: #fff;
+            display: block;
             line-height: 17px;
             font-size: 1.2rem;
-            font-weight: 900;
+            font-weight: 800;
             margin: 0;
             padding: 0;
         }
     }
     .score {
         justify-self: end;
-        width: auto;
+        width: 70px;
         margin: 10px 8px;
         background-color: #fff;
         border-radius: 6px;
@@ -45,67 +45,42 @@ body {
         }
     }
 }
-
-// .game-container {
-//     .stage-1 {
-//         background-image: url("../images/bg-triangle.svg");
-//         background-repeat: no-repeat;
-//         background-position: center;
-//         width: 300px;
-//         height: 400px;
-//         margin: 20px auto;
-//         margin-top: 43px;
-//         @include paper(80px);
-//         @include scissors(80px);
-//         @include rock(80px);
-//     }
-// }
+$size: 100px;
+@include scissors($size, 10px);
+@include paper($size, 10px);
+@include rock($size, 10px);
 .game-container {
-    margin: 75px 0;
-    .stage-1 {
+    margin-top: 54px;
+    margin-bottom: 54px;
+    .step-1 {
+        // display: none;
         background-image: url("../images/bg-triangle.svg");
         background-repeat: no-repeat;
         background-size: 220px;
         background-position: center;
-<<<<<<< HEAD
-        height: auto;
-        margin: 45px auto 23px auto;
-=======
         width: 300px;
         height: 400px;
         height: auto;
         margin: 20px auto 0 auto;
         margin-top: 5%;
         $size: 55px;
->>>>>>> core-game
         .paper-wrapper {
             position: relative;
             left: 12px;
             top: 10px;
-<<<<<<< HEAD
-            width: 70px;
-            height: 70px;
-=======
             width: ($size + 20px);
             height: ($size + 20px);
->>>>>>> core-game
             margin: 0;
             border-radius: 50%;
             background: linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
             padding: 15px;
             border-bottom: 8px solid hsl(230, 60%, 45%);
-<<<<<<< HEAD
-            .paper {
-                width: 50px;
-                height: 50px;
-=======
             &:hover {
                 cursor: pointer;
             }
             .paper {
                 width: ($size);
                 height: ($size);
->>>>>>> core-game
                 border-radius: 50%;
                 background: white;
                 text-align: center;
@@ -116,50 +91,6 @@ body {
                     margin-right: 2px;
                     width: 85%;
                 }
-<<<<<<< HEAD
-            }
-        }
-        .scissors-wrapper {
-            position: relative;
-            left: 188px;
-            top: -98px;
-            width: 70px;
-            height: 70px;
-            margin: 0;
-            border-radius: 50%;
-            background: linear-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
-            padding: 15px;
-            border-bottom: 8px solid hsl(39, 97%, 39%);
-            .scissors {
-                width: 50px;
-                height: 50px;
-                border-radius: 50%;
-                background: white;
-                text-align: center;
-                padding: 10px;
-                border-top: 5px solid #ddd;
-                #scissors {
-                    margin-top: -3px;
-                    margin-right: 2px;
-                    width: 85%;
-                }
-            }
-        }
-        .rock-wrapper {
-            position: relative;
-            left: 103px;
-            top: -48px;
-            width: 70px;
-            height: 70px;
-            margin: 0;
-            border-radius: 50%;
-            background: linear-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
-            padding: 15px;
-            border-bottom: 8px solid hsl(349, 73%, 39%);
-            .rock {
-                width: 50px;
-                height: 50px;
-=======
             }
         }
         .scissors-wrapper {
@@ -209,38 +140,98 @@ body {
             .rock {
                 width: ($size);
                 height: ($size);
->>>>>>> core-game
                 border-radius: 50%;
                 background: white;
                 text-align: center;
                 padding: 10px;
                 border-top: 5px solid #ddd;
                 #rock {
-<<<<<<< HEAD
-                    margin-top: 2px;
-=======
                     margin-top: -2px;
->>>>>>> core-game
                     margin-right: 2px;
                     width: 85%;
                 }
             }
         }
     }
-}
-<<<<<<< HEAD
+    .step-2-3-4 {
+        display: none;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        .user-selection {
+            display: flex;
+            flex-flow: column nowrap;
+            text-align: center;
+            align-items: center;
+            order: 1;
+            .text {
+                text-align: center;
+                color: #fff;
+                font-size: 1.1rem;
+                font-weight: 700;
+                order: 2;
+            }
+        }
+        .lose-win {
+            display: none;
+            text-align: center;
+            order: 2;
+            margin: 50px 0 52px 0;
+            align-self: center;
+            .outcome {
+                text-transform: uppercase;
+                color: #fff;
+                font-weight: 700;
+                font-size: 3.4rem;
+                width: 300px;
+                letter-spacing: 0.2rem;
+                margin: 12px;
+            }
+            #playAgain {
+                padding: 18px;
+                width: 220px;
+                border-radius: 4px;
+                background-color: #fff;
+                color: $darkText;
+                border: none;
+                outline: none;
+                font-weight: 600;
+                font-size: 1.2rem;
+            }
+        }
 
-.rules {
-    text-align: center;
-    margin-bottom: 12px;
-=======
+        .house-selection {
+            display: flex;
+            flex-flow: column nowrap;
+            text-align: center;
+            align-items: center;
+            text-align: center;
+            order: 3;
+            .text {
+                text-align: center;
+                color: #fff;
+                font-size: 1.1rem;
+                font-weight: 700;
+            }
+            .wrapper {
+                display: none;
+            }
+            .unknown {
+                background-color: hsl(237, 49%, 15%);
+                width: 110px;
+                height: 110px;
+                border-radius: 50%;
+                margin: 10px auto;
+                // display: none;
+            }
+        }
+    }
+}
 .text {
-    margin: 8px;
+    margin: 28px 8px;
 }
 .rules {
     text-align: center;
     margin-bottom: 20px;
->>>>>>> core-game
     #rulesBtn {
         border-radius: 8px;
         background: none;
@@ -279,6 +270,10 @@ body {
             margin: 0;
             padding: 0;
             top: 70vh;
+
+            &:hover {
+                cursor: pointer;
+            }
         }
         .rules-title {
             color: $darkText;
@@ -291,74 +286,6 @@ body {
             width: 250px;
             z-index: -1;
             padding: 0;
-        }
-    }
-}
-
-// size variable
-$size: 60px;
-.paper-wrapper {
-    width: ($size + 20px);
-    height: ($size + 20px);
-    border-radius: 50%;
-    background: linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
-    padding: 18px;
-    border-bottom: 8px solid hsl(230, 60%, 45%);
-    .paper {
-        width: $size;
-        height: $size;
-        border-radius: 50%;
-        background: white;
-        text-align: center;
-        padding: 10px;
-        border-top: 5px solid #eee;
-        .paperImg {
-            margin-right: 4px;
-            width: 60%;
-            margin-top: 8px;
-        }
-    }
-}
-.scissors-wrapper {
-    width: ($size + 20px);
-    height: ($size + 20px);
-    border-radius: 50%;
-    background: linear-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
-    padding: 18px;
-    border-bottom: 8px solid hsl(39, 97%, 39%);
-    .scissors {
-        width: $size;
-        height: $size;
-        border-radius: 50%;
-        background: white;
-        text-align: center;
-        padding: 10px;
-        border-top: 5px solid #eee;
-        .scissorsImg {
-            margin-top: 8px;
-            width: 60%;
-        }
-    }
-}
-.rock-wrapper {
-    width: ($size + 20px);
-    height: ($size + 20px);
-    border-radius: 50%;
-    background: linear-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
-    padding: 18px;
-    border-bottom: 8px solid hsl(349, 73%, 39%);
-    .rock {
-        width: $size;
-        height: $size;
-        border-radius: 50%;
-        background: white;
-        text-align: center;
-        padding: 10px;
-        border-top: 5px solid #eee;
-        .rockImg {
-            margin-top: 12px;
-            margin-right: 4px;
-            width: 60%;
         }
     }
 }

@@ -6,14 +6,9 @@
 $darkText: hsl(229, 25%, 31%);
 $scoreText: hsl(229, 64%, 46%);
 $headerOutline: hsl(217, 16%, 45%);
-<<<<<<< HEAD
 
-@mixin paper($size) {
+@mixin paper($size,$margin) {
     .paper-wrapper {
-        cursor: pointer;
-        position: relative;
-        left: -48px;
-        top: -28px;
         width: ($size + 20px);
         height: ($size + 20px);
         border-radius: 50%;
@@ -29,19 +24,15 @@ $headerOutline: hsl(217, 16%, 45%);
             padding: 10px;
             border-top: 5px solid #ddd;
             #paper {
-                margin-top: 18px;
-                margin-right: 4px;
+                margin: $margin auto;
+                width: 50%;
             }
         }
     }
 }
 
-@mixin scissors($size) {
+@mixin scissors($size,$margin) {
     .scissors-wrapper {
-        cursor: pointer;
-        position: relative;
-        left: 190px;
-        top: -196px;
         width: ($size + 20px);
         height: ($size + 20px);
         border-radius: 50%;
@@ -57,19 +48,15 @@ $headerOutline: hsl(217, 16%, 45%);
             padding: 10px;
             border-top: 5px solid #ddd;
             #scissors {
-                margin-top: 18px;
-                margin-right: 4px;
+                margin: $margin auto;
+                width: 50%;
             }
         }
     }
 }
 
-@mixin rock($size) {
+@mixin rock($size,$margin) {
     .rock-wrapper {
-        position: relative;
-        left: 70px;
-        top: -155px;
-        cursor: pointer;
         width: ($size + 20px);
         height: ($size + 20px);
         border-radius: 50%;
@@ -85,11 +72,9 @@ $headerOutline: hsl(217, 16%, 45%);
             padding: 10px;
             border-top: 5px solid #ddd;
             #rock {
-                margin-top: 22px;
-                margin-right: 4px;
+                margin: $margin auto;
+                width: 50%;
             }
         }
     }
 }
-=======
->>>>>>> core-game

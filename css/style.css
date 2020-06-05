@@ -27,9 +27,10 @@ body {
 
 .scoreboard .rockpaperscissors p {
   color: #fff;
+  display: block;
   line-height: 17px;
   font-size: 1.2rem;
-  font-weight: 900;
+  font-weight: 800;
   margin: 0;
   padding: 0;
 }
@@ -37,7 +38,7 @@ body {
 .scoreboard .score {
   -ms-grid-column-align: end;
       justify-self: end;
-  width: auto;
+  width: 70px;
   margin: 10px 8px;
   background-color: #fff;
   border-radius: 6px;
@@ -56,38 +57,104 @@ body {
   font-weight: 700;
 }
 
-.game-container {
-  margin: 75px 0;
+.scissors-wrapper {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ec9e0e), to(#eca922));
+  background: linear-gradient(#ec9e0e, #eca922);
+  padding: 18px;
+  border-bottom: 8px solid #c48003;
 }
 
-.game-container .stage-1 {
+.scissors-wrapper .scissors {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: white;
+  text-align: center;
+  padding: 10px;
+  border-top: 5px solid #ddd;
+}
+
+.scissors-wrapper .scissors #scissors {
+  margin: 10px auto;
+  width: 50%;
+}
+
+.paper-wrapper {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#4865f4), to(#5671f5));
+  background: linear-gradient(#4865f4, #5671f5);
+  padding: 18px;
+  border-bottom: 8px solid #2e45b8;
+}
+
+.paper-wrapper .paper {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: white;
+  text-align: center;
+  padding: 10px;
+  border-top: 5px solid #ddd;
+}
+
+.paper-wrapper .paper #paper {
+  margin: 10px auto;
+  width: 50%;
+}
+
+.rock-wrapper {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#dc2e4e), to(#dd405d));
+  background: linear-gradient(#dc2e4e, #dd405d);
+  padding: 18px;
+  border-bottom: 8px solid #ac1b35;
+}
+
+.rock-wrapper .rock {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: white;
+  text-align: center;
+  padding: 10px;
+  border-top: 5px solid #ddd;
+}
+
+.rock-wrapper .rock #rock {
+  margin: 10px auto;
+  width: 50%;
+}
+
+.game-container {
+  margin-top: 54px;
+  margin-bottom: 54px;
+}
+
+.game-container .step-1 {
   background-image: url("../images/bg-triangle.svg");
   background-repeat: no-repeat;
   background-size: 220px;
   background-position: center;
-<<<<<<< HEAD
-  height: auto;
-  margin: 45px auto 23px auto;
-=======
   width: 300px;
   height: 400px;
   height: auto;
   margin: 20px auto 0 auto;
   margin-top: 5%;
->>>>>>> core-game
 }
 
-.game-container .stage-1 .paper-wrapper {
+.game-container .step-1 .paper-wrapper {
   position: relative;
   left: 12px;
   top: 10px;
-<<<<<<< HEAD
-  width: 70px;
-  height: 70px;
-=======
   width: 75px;
   height: 75px;
->>>>>>> core-game
   margin: 0;
   border-radius: 50%;
   background: -webkit-gradient(linear, left top, left bottom, from(#4865f4), to(#5671f5));
@@ -96,18 +163,13 @@ body {
   border-bottom: 8px solid #2e45b8;
 }
 
-.game-container .stage-1 .paper-wrapper:hover {
+.game-container .step-1 .paper-wrapper:hover {
   cursor: pointer;
 }
 
-.game-container .stage-1 .paper-wrapper .paper {
-<<<<<<< HEAD
-  width: 50px;
-  height: 50px;
-=======
+.game-container .step-1 .paper-wrapper .paper {
   width: 55px;
   height: 55px;
->>>>>>> core-game
   border-radius: 50%;
   background: white;
   text-align: center;
@@ -115,24 +177,18 @@ body {
   border-top: 5px solid #ddd;
 }
 
-.game-container .stage-1 .paper-wrapper .paper #paper {
+.game-container .step-1 .paper-wrapper .paper #paper {
   margin-top: -5px;
   margin-right: 2px;
   width: 85%;
 }
 
-.game-container .stage-1 .scissors-wrapper {
+.game-container .step-1 .scissors-wrapper {
   position: relative;
   left: 188px;
-<<<<<<< HEAD
-  top: -98px;
-  width: 70px;
-  height: 70px;
-=======
   top: -105px;
   width: 75px;
   height: 75px;
->>>>>>> core-game
   margin: 0;
   border-radius: 50%;
   background: -webkit-gradient(linear, left top, left bottom, from(#ec9e0e), to(#eca922));
@@ -141,18 +197,13 @@ body {
   border-bottom: 8px solid #c48003;
 }
 
-.game-container .stage-1 .scissors-wrapper:hover {
+.game-container .step-1 .scissors-wrapper:hover {
   cursor: pointer;
 }
 
-.game-container .stage-1 .scissors-wrapper .scissors {
-<<<<<<< HEAD
-  width: 50px;
-  height: 50px;
-=======
+.game-container .step-1 .scissors-wrapper .scissors {
   width: 55px;
   height: 55px;
->>>>>>> core-game
   border-radius: 50%;
   background: white;
   text-align: center;
@@ -160,25 +211,18 @@ body {
   border-top: 5px solid #ddd;
 }
 
-.game-container .stage-1 .scissors-wrapper .scissors #scissors {
+.game-container .step-1 .scissors-wrapper .scissors #scissors {
   margin-top: -3px;
   margin-right: 2px;
   width: 85%;
 }
 
-.game-container .stage-1 .rock-wrapper {
+.game-container .step-1 .rock-wrapper {
   position: relative;
-<<<<<<< HEAD
-  left: 103px;
-  top: -48px;
-  width: 70px;
-  height: 70px;
-=======
   left: 95px;
   top: -48px;
   width: 75px;
   height: 75px;
->>>>>>> core-game
   margin: 0;
   border-radius: 50%;
   background: -webkit-gradient(linear, left top, left bottom, from(#dc2e4e), to(#dd405d));
@@ -187,18 +231,13 @@ body {
   border-bottom: 8px solid #ac1b35;
 }
 
-.game-container .stage-1 .rock-wrapper:hover {
+.game-container .step-1 .rock-wrapper:hover {
   cursor: pointer;
 }
 
-.game-container .stage-1 .rock-wrapper .rock {
-<<<<<<< HEAD
-  width: 50px;
-  height: 50px;
-=======
+.game-container .step-1 .rock-wrapper .rock {
   width: 55px;
   height: 55px;
->>>>>>> core-game
   border-radius: 50%;
   background: white;
   text-align: center;
@@ -206,29 +245,128 @@ body {
   border-top: 5px solid #ddd;
 }
 
-.game-container .stage-1 .rock-wrapper .rock #rock {
-<<<<<<< HEAD
-  margin-top: 2px;
-  margin-right: 2px;
-  width: 85%;
-=======
+.game-container .step-1 .rock-wrapper .rock #rock {
   margin-top: -2px;
   margin-right: 2px;
   width: 85%;
 }
 
+.game-container .step-2-3-4 {
+  display: none;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.game-container .step-2-3-4 .user-selection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+.game-container .step-2-3-4 .user-selection .text {
+  text-align: center;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
+.game-container .step-2-3-4 .lose-win {
+  display: none;
+  text-align: center;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  margin: 50px 0 52px 0;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.game-container .step-2-3-4 .lose-win .outcome {
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 700;
+  font-size: 3.4rem;
+  width: 300px;
+  letter-spacing: 0.2rem;
+  margin: 12px;
+}
+
+.game-container .step-2-3-4 .lose-win #playAgain {
+  padding: 18px;
+  width: 220px;
+  border-radius: 4px;
+  background-color: #fff;
+  color: #3b4363;
+  border: none;
+  outline: none;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.game-container .step-2-3-4 .house-selection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+}
+
+.game-container .step-2-3-4 .house-selection .text {
+  text-align: center;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.game-container .step-2-3-4 .house-selection .wrapper {
+  display: none;
+}
+
+.game-container .step-2-3-4 .house-selection .unknown {
+  background-color: #141539;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  margin: 10px auto;
+}
+
 .text {
-  margin: 8px;
->>>>>>> core-game
+  margin: 28px 8px;
 }
 
 .rules {
   text-align: center;
-<<<<<<< HEAD
-  margin-bottom: 12px;
-=======
   margin-bottom: 20px;
->>>>>>> core-game
 }
 
 .rules #rulesBtn {
@@ -276,6 +414,10 @@ body {
   top: 70vh;
 }
 
+.modal-content #icon-close:hover {
+  cursor: pointer;
+}
+
 .modal-content .rules-title {
   color: #3b4363;
   padding: 0;
@@ -288,83 +430,6 @@ body {
   width: 250px;
   z-index: -1;
   padding: 0;
-}
-
-.paper-wrapper {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  background: -webkit-gradient(linear, left top, left bottom, from(#4865f4), to(#5671f5));
-  background: linear-gradient(#4865f4, #5671f5);
-  padding: 18px;
-  border-bottom: 8px solid #2e45b8;
-}
-
-.paper-wrapper .paper {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background: white;
-  text-align: center;
-  padding: 10px;
-  border-top: 5px solid #eee;
-}
-
-.paper-wrapper .paper .paperImg {
-  margin-right: 4px;
-  width: 60%;
-  margin-top: 8px;
-}
-
-.scissors-wrapper {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  background: -webkit-gradient(linear, left top, left bottom, from(#ec9e0e), to(#eca922));
-  background: linear-gradient(#ec9e0e, #eca922);
-  padding: 18px;
-  border-bottom: 8px solid #c48003;
-}
-
-.scissors-wrapper .scissors {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background: white;
-  text-align: center;
-  padding: 10px;
-  border-top: 5px solid #eee;
-}
-
-.scissors-wrapper .scissors .scissorsImg {
-  margin-top: 8px;
-  width: 60%;
-}
-
-.rock-wrapper {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  background: -webkit-gradient(linear, left top, left bottom, from(#dc2e4e), to(#dd405d));
-  background: linear-gradient(#dc2e4e, #dd405d);
-  padding: 18px;
-  border-bottom: 8px solid #ac1b35;
-}
-
-.rock-wrapper .rock {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background: white;
-  text-align: center;
-  padding: 10px;
-  border-top: 5px solid #eee;
-}
-
-.rock-wrapper .rock .rockImg {
-  margin-top: 12px;
-  margin-right: 4px;
-  width: 60%;
 }
 
 .show-modal {
@@ -380,34 +445,277 @@ body {
   color: #3e52a3;
 }
 
-@media screen and (min-width: 700px) {
-  .rules {
-    text-align: none;
-<<<<<<< HEAD
-    position: absolute;
-=======
-    position: fixed;
->>>>>>> core-game
-    right: 12px;
-    bottom: 25px;
+@media screen and (max-width: 635px) {
+  .scissors-wrapper {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background: -webkit-gradient(linear, left top, left bottom, from(#ec9e0e), to(#eca922));
+    background: linear-gradient(#ec9e0e, #eca922);
+    padding: 18px;
+    border-bottom: 8px solid #c48003;
   }
-  .rules #rulesBtn {
-    border-radius: 8px;
-    background: none;
-    width: 160px;
-    padding: 8px;
-    border: 1px solid #fff;
+  .scissors-wrapper .scissors {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: white;
+    text-align: center;
+    padding: 10px;
+    border-top: 5px solid #ddd;
+  }
+  .scissors-wrapper .scissors #scissors {
+    margin: 10px auto;
+    width: 50%;
+  }
+  .paper-wrapper {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background: -webkit-gradient(linear, left top, left bottom, from(#4865f4), to(#5671f5));
+    background: linear-gradient(#4865f4, #5671f5);
+    padding: 18px;
+    border-bottom: 8px solid #2e45b8;
+  }
+  .paper-wrapper .paper {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: white;
+    text-align: center;
+    padding: 10px;
+    border-top: 5px solid #ddd;
+  }
+  .paper-wrapper .paper #paper {
+    margin: 10px auto;
+    width: 50%;
+  }
+  .rock-wrapper {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background: -webkit-gradient(linear, left top, left bottom, from(#dc2e4e), to(#dd405d));
+    background: linear-gradient(#dc2e4e, #dd405d);
+    padding: 18px;
+    border-bottom: 8px solid #ac1b35;
+  }
+  .rock-wrapper .rock {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: white;
+    text-align: center;
+    padding: 10px;
+    border-top: 5px solid #ddd;
+  }
+  .rock-wrapper .rock #rock {
+    margin: 10px auto;
+    width: 50%;
+  }
+  .game-container {
+    margin-top: 54px;
+  }
+  .game-container .step-2-3-4 {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .game-container .step-2-3-4 .user-selection {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    text-align: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .game-container .step-2-3-4 .user-selection .text {
+    text-align: center;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 700;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .game-container .step-2-3-4 .lose-win {
+    text-align: center;
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    margin: 50px 0 52px 0;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .game-container .step-2-3-4 .lose-win .outcome {
+    text-transform: uppercase;
     color: #fff;
     font-weight: 700;
-    font-size: 1.1rem;
-    outline: none;
+    font-size: 3.4rem;
+    width: 300px;
+    letter-spacing: 0.2rem;
+    margin: 12px;
   }
-  .rules #rulesBtn:hover {
+  .game-container .step-2-3-4 .lose-win #playAgain {
+    padding: 18px;
+    width: 220px;
+    border-radius: 4px;
     background-color: #fff;
     color: #3b4363;
-    background: line;
-    cursor: pointer;
+    border: none;
+    outline: none;
+    font-weight: 600;
+    font-size: 1.2rem;
   }
+  .game-container .step-2-3-4 .house-selection {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    text-align: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .game-container .step-2-3-4 .house-selection .text {
+    text-align: center;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 700;
+  }
+  .game-container .step-2-3-4 .house-selection .unknown {
+    background-color: #141539;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 636px) {
+  .game-container .step-2-3-4 .lose-win {
+    text-align: center;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    margin: 0px 0 52px 0;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .game-container .step-1 {
+    background-image: url("../images/bg-triangle.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 290px 290px;
+    width: 300px;
+    height: 400px;
+    margin: 20px auto 0 auto;
+    margin-top: 5%;
+  }
+  .game-container .step-1 .paper-wrapper {
+    position: relative;
+    left: -60px;
+    top: -28px;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: -webkit-gradient(linear, left top, left bottom, from(#4865f4), to(#5671f5));
+    background: linear-gradient(#4865f4, #5671f5);
+    padding: 18px;
+    border-bottom: 8px solid #2e45b8;
+  }
+  .game-container .step-1 .paper-wrapper .paper {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: white;
+    text-align: center;
+    padding: 10px;
+    border-top: 5px solid #ddd;
+  }
+  .game-container .step-1 .paper-wrapper .paper #paper {
+    margin: 18px auto;
+    width: 50%;
+  }
+  .game-container .step-1 .scissors-wrapper {
+    position: relative;
+    left: 200px;
+    top: -190px;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: -webkit-gradient(linear, left top, left bottom, from(#ec9e0e), to(#eca922));
+    background: linear-gradient(#ec9e0e, #eca922);
+    padding: 18px;
+    border-bottom: 8px solid #c48003;
+  }
+  .game-container .step-1 .scissors-wrapper .scissors {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: white;
+    text-align: center;
+    padding: 10px;
+    border-top: 5px solid #ddd;
+  }
+  .game-container .step-1 .scissors-wrapper .scissors #scissors {
+    margin: 18px auto;
+    width: 50%;
+  }
+  .game-container .step-1 .rock-wrapper {
+    position: relative;
+    left: 70px;
+    top: -150px;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: -webkit-gradient(linear, left top, left bottom, from(#dc2e4e), to(#dd405d));
+    background: linear-gradient(#dc2e4e, #dd405d);
+    padding: 18px;
+    border-bottom: 8px solid #ac1b35;
+  }
+  .game-container .step-1 .rock-wrapper .rock {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: white;
+    text-align: center;
+    padding: 10px;
+    border-top: 5px solid #ddd;
+  }
+  .game-container .step-1 .rock-wrapper .rock #rock {
+    margin: 26px auto;
+    width: 50%;
+  }
+  .game-container .step-2-3-4 .house-selection {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+  .game-container .step-2-3-4 .house-selection .unknown {
+    width: 150px;
+    height: 150px;
+    margin: 13px auto;
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 720px) {
   .modal {
     position: fixed;
     width: 100%;
@@ -446,6 +754,30 @@ body {
     z-index: -1;
     padding: 0;
   }
+  .rules {
+    text-align: none;
+    position: relative;
+    right: 22px;
+    bottom: 15px;
+    float: right;
+  }
+  .rules #rulesBtn {
+    border-radius: 8px;
+    background: none;
+    width: 160px;
+    padding: 8px;
+    border: 1px solid #fff;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.1rem;
+    outline: none;
+  }
+  .rules #rulesBtn:hover {
+    background-color: #fff;
+    color: #3b4363;
+    background: line;
+    cursor: pointer;
+  }
   .scoreboard {
     width: 50%;
     display: -ms-grid;
@@ -459,7 +791,7 @@ body {
   .scoreboard .rockpaperscissors {
     margin: auto 18px;
   }
-  .scoreboard .rockpaperscissors b {
+  .scoreboard .rockpaperscissors p {
     color: #fff;
     display: block;
     line-height: 24px;
@@ -484,19 +816,27 @@ body {
     font-size: 3.8rem;
     margin: 0 4px;
   }
-  .text {
-    color: #fff;
-    font-weight: 600;
-    font-size: 1.2rem;
-    margin: 12px;
-    text-align: center;
-  }
-  .unknown {
-    width: 150px;
-    height: 150px;
+  .scissors-wrapper {
+    width: 140px;
+    height: 140px;
     border-radius: 50%;
-    background-color: #162138;
-<<<<<<< HEAD
+    background: -webkit-gradient(linear, left top, left bottom, from(#ec9e0e), to(#eca922));
+    background: linear-gradient(#ec9e0e, #eca922);
+    padding: 18px;
+    border-bottom: 8px solid #c48003;
+  }
+  .scissors-wrapper .scissors {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: white;
+    text-align: center;
+    padding: 10px;
+    border-top: 5px solid #ddd;
+  }
+  .scissors-wrapper .scissors #scissors {
+    margin: 23px auto;
+    width: 50%;
   }
   .paper-wrapper {
     width: 140px;
@@ -516,31 +856,9 @@ body {
     padding: 10px;
     border-top: 5px solid #ddd;
   }
-  .paper-wrapper .paper .paperImg {
-    margin-top: 16px;
-    margin-right: 4px;
-  }
-  .scissors-wrapper {
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;
-    background: -webkit-gradient(linear, left top, left bottom, from(#ec9e0e), to(#eca922));
-    background: linear-gradient(#ec9e0e, #eca922);
-    padding: 18px;
-    border-bottom: 8px solid #c48003;
-  }
-  .scissors-wrapper .scissors {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    background: white;
-    text-align: center;
-    padding: 10px;
-    border-top: 5px solid #ddd;
-  }
-  .scissors-wrapper .scissors .scissorsImg {
-    margin-top: 18px;
-    margin-right: 0px;
+  .paper-wrapper .paper #paper {
+    margin: 20px auto;
+    width: 50%;
   }
   .rock-wrapper {
     width: 140px;
@@ -560,171 +878,595 @@ body {
     padding: 10px;
     border-top: 5px solid #ddd;
   }
-  .rock-wrapper .rock .rockImg {
-    margin-top: 22px;
-    margin-right: 4px;
-=======
->>>>>>> core-game
+  .rock-wrapper .rock #rock {
+    margin: 20px auto;
+    width: 50%;
   }
-  .game-container .stage-1 {
+  .game-container {
+    margin-top: 64px;
+    margin-bottom: 75px;
+  }
+  .game-container .step-1 {
     background-image: url("../images/bg-triangle.svg");
     background-repeat: no-repeat;
     background-position: center;
-<<<<<<< HEAD
-    width: 300px;
-    height: 400px;
-    margin: 20px auto;
-    margin-top: 73px;
-=======
     background-size: 320px 290px;
     width: 300px;
     height: 400px;
     margin: 20px auto 0 auto;
     margin-top: 5%;
->>>>>>> core-game
   }
-  .game-container .stage-1 .paper-wrapper {
-    cursor: pointer;
+  .game-container .step-1 .paper-wrapper {
     position: relative;
-<<<<<<< HEAD
-    left: -48px;
-    top: -28px;
-    width: 120px;
-    height: 120px;
-=======
     left: -68px;
     top: -28px;
     width: 140px;
     height: 140px;
->>>>>>> core-game
     border-radius: 50%;
     background: -webkit-gradient(linear, left top, left bottom, from(#4865f4), to(#5671f5));
     background: linear-gradient(#4865f4, #5671f5);
     padding: 18px;
     border-bottom: 8px solid #2e45b8;
   }
-  .game-container .stage-1 .paper-wrapper .paper {
-<<<<<<< HEAD
-    width: 100px;
-    height: 100px;
-=======
+  .game-container .step-1 .paper-wrapper .paper {
     width: 120px;
     height: 120px;
->>>>>>> core-game
     border-radius: 50%;
     background: white;
     text-align: center;
     padding: 10px;
     border-top: 5px solid #ddd;
   }
-  .game-container .stage-1 .paper-wrapper .paper #paper {
-    margin-top: 18px;
-    margin-right: 4px;
-<<<<<<< HEAD
-=======
+  .game-container .step-1 .paper-wrapper .paper #paper {
+    margin: 18px auto;
     width: 50%;
->>>>>>> core-game
   }
-  .game-container .stage-1 .scissors-wrapper {
-    cursor: pointer;
+  .game-container .step-1 .scissors-wrapper {
     position: relative;
-<<<<<<< HEAD
-    left: 190px;
-    top: -196px;
-    width: 120px;
-    height: 120px;
-=======
     left: 200px;
     top: -210px;
     width: 140px;
     height: 140px;
->>>>>>> core-game
     border-radius: 50%;
     background: -webkit-gradient(linear, left top, left bottom, from(#ec9e0e), to(#eca922));
     background: linear-gradient(#ec9e0e, #eca922);
     padding: 18px;
     border-bottom: 8px solid #c48003;
   }
-  .game-container .stage-1 .scissors-wrapper .scissors {
-<<<<<<< HEAD
-    width: 100px;
-    height: 100px;
-=======
+  .game-container .step-1 .scissors-wrapper .scissors {
     width: 120px;
     height: 120px;
->>>>>>> core-game
     border-radius: 50%;
     background: white;
     text-align: center;
     padding: 10px;
     border-top: 5px solid #ddd;
   }
-  .game-container .stage-1 .scissors-wrapper .scissors #scissors {
-    margin-top: 18px;
-    margin-right: 4px;
-<<<<<<< HEAD
-  }
-  .game-container .stage-1 .rock-wrapper {
-    position: relative;
-    left: 70px;
-    top: -155px;
-    cursor: pointer;
-    width: 120px;
-    height: 120px;
-=======
+  .game-container .step-1 .scissors-wrapper .scissors #scissors {
+    margin: 18px auto;
     width: 50%;
   }
-  .game-container .stage-1 .rock-wrapper {
+  .game-container .step-1 .rock-wrapper {
     position: relative;
     left: 60px;
     top: -165px;
     width: 140px;
     height: 140px;
->>>>>>> core-game
     border-radius: 50%;
     background: -webkit-gradient(linear, left top, left bottom, from(#dc2e4e), to(#dd405d));
     background: linear-gradient(#dc2e4e, #dd405d);
     padding: 18px;
     border-bottom: 8px solid #ac1b35;
   }
-  .game-container .stage-1 .rock-wrapper .rock {
-<<<<<<< HEAD
-    width: 100px;
-    height: 100px;
-=======
+  .game-container .step-1 .rock-wrapper .rock {
     width: 120px;
     height: 120px;
->>>>>>> core-game
     border-radius: 50%;
     background: white;
     text-align: center;
     padding: 10px;
     border-top: 5px solid #ddd;
   }
-  .game-container .stage-1 .rock-wrapper .rock #rock {
-<<<<<<< HEAD
-    margin-top: 22px;
-    margin-right: 4px;
-=======
-    margin-top: 28px;
-    margin-right: 4px;
+  .game-container .step-1 .rock-wrapper .rock #rock {
+    margin: 26px auto;
     width: 50%;
->>>>>>> core-game
+  }
+  .game-container .step-2-3-4 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    margin: 12px;
+  }
+  .game-container .step-2-3-4 .user-selection {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .game-container .step-2-3-4 .user-selection .wrapper {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .game-container .step-2-3-4 .user-selection .text {
+    text-align: center;
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 700;
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+    margin-bottom: 43px;
+  }
+  .game-container .step-2-3-4 .lose-win {
+    text-align: center;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    margin-top: 32px;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .game-container .step-2-3-4 .lose-win .outcome {
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 700;
+    font-size: 3.4rem;
+    width: 300px;
+    letter-spacing: 0.2rem;
+  }
+  .game-container .step-2-3-4 .lose-win #playAgain {
+    padding: 18px;
+    width: 220px;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #3b4363;
+    border: none;
+    outline: none;
+    font-weight: 600;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+  .game-container .step-2-3-4 .house-selection {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    text-align: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .game-container .step-2-3-4 .house-selection .text {
+    text-align: center;
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 700;
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+    margin-bottom: 44px;
+  }
+  .game-container .step-2-3-4 .house-selection .wrapper {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .game-container .step-2-3-4 .house-selection .unknown {
+    background-color: #141539;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    margin: 12px auto;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
   }
 }
 
-@media screen and (max-width: 300px) {
-  .game-container .stage-1 {
+@media screen and (min-width: 1000px) {
+  .scissors-wrapper {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: -webkit-gradient(linear, left top, left bottom, from(#ec9e0e), to(#eca922));
+    background: linear-gradient(#ec9e0e, #eca922);
+    padding: 18px;
+    border-bottom: 8px solid #c48003;
+  }
+  .scissors-wrapper .scissors {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background: white;
+    text-align: center;
+    padding: 10px;
+    border-top: 5px solid #ddd;
+  }
+  .scissors-wrapper .scissors #scissors {
+    margin: 33px auto;
+    width: 50%;
+  }
+  .paper-wrapper {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: -webkit-gradient(linear, left top, left bottom, from(#4865f4), to(#5671f5));
+    background: linear-gradient(#4865f4, #5671f5);
+    padding: 18px;
+    border-bottom: 8px solid #2e45b8;
+  }
+  .paper-wrapper .paper {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background: white;
+    text-align: center;
+    padding: 10px;
+    border-top: 5px solid #ddd;
+  }
+  .paper-wrapper .paper #paper {
+    margin: 30px auto;
+    width: 50%;
+  }
+  .rock-wrapper {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: -webkit-gradient(linear, left top, left bottom, from(#dc2e4e), to(#dd405d));
+    background: linear-gradient(#dc2e4e, #dd405d);
+    padding: 18px;
+    border-bottom: 8px solid #ac1b35;
+  }
+  .rock-wrapper .rock {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background: white;
+    text-align: center;
+    padding: 10px;
+    border-top: 5px solid #ddd;
+  }
+  .rock-wrapper .rock #rock {
+    margin: 20px auto;
+    width: 50%;
+  }
+  .game-container {
+    margin-top: 64px;
+    margin-bottom: 45px;
+  }
+  .game-container .step-1 {
+    background-image: url("../images/bg-triangle.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 320px 290px;
+    width: 300px;
+    height: 400px;
+    margin: 20px auto 0 auto;
+    margin-top: 5%;
+  }
+  .game-container .step-1 .paper-wrapper {
+    position: relative;
+    left: -68px;
+    top: -28px;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background: -webkit-gradient(linear, left top, left bottom, from(#4865f4), to(#5671f5));
+    background: linear-gradient(#4865f4, #5671f5);
+    padding: 18px;
+    border-bottom: 8px solid #2e45b8;
+  }
+  .game-container .step-1 .paper-wrapper .paper {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: white;
+    text-align: center;
+    padding: 10px;
+    border-top: 5px solid #ddd;
+  }
+  .game-container .step-1 .paper-wrapper .paper #paper {
+    margin: 18px auto;
+    width: 50%;
+  }
+  .game-container .step-1 .scissors-wrapper {
+    position: relative;
+    left: 200px;
+    top: -210px;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background: -webkit-gradient(linear, left top, left bottom, from(#ec9e0e), to(#eca922));
+    background: linear-gradient(#ec9e0e, #eca922);
+    padding: 18px;
+    border-bottom: 8px solid #c48003;
+  }
+  .game-container .step-1 .scissors-wrapper .scissors {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: white;
+    text-align: center;
+    padding: 10px;
+    border-top: 5px solid #ddd;
+  }
+  .game-container .step-1 .scissors-wrapper .scissors #scissors {
+    margin: 18px auto;
+    width: 50%;
+  }
+  .game-container .step-1 .rock-wrapper {
+    position: relative;
+    left: 60px;
+    top: -165px;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background: -webkit-gradient(linear, left top, left bottom, from(#dc2e4e), to(#dd405d));
+    background: linear-gradient(#dc2e4e, #dd405d);
+    padding: 18px;
+    border-bottom: 8px solid #ac1b35;
+  }
+  .game-container .step-1 .rock-wrapper .rock {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: white;
+    text-align: center;
+    padding: 10px;
+    border-top: 5px solid #ddd;
+  }
+  .game-container .step-1 .rock-wrapper .rock #rock {
+    margin: 26px auto;
+    width: 50%;
+  }
+  .game-container .step-2-3-4 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .game-container .step-2-3-4 .user-selection {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+  }
+  .game-container .step-2-3-4 .user-selection .wrapper {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .game-container .step-2-3-4 .user-selection .text {
+    text-align: center;
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 700;
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+    margin-bottom: 43px;
+  }
+  .game-container .step-2-3-4 .lose-win {
+    text-align: center;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .game-container .step-2-3-4 .lose-win .outcome {
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 700;
+    font-size: 3.4rem;
+    width: 300px;
+    letter-spacing: 0.2rem;
+  }
+  .game-container .step-2-3-4 .lose-win #playAgain {
+    padding: 18px;
+    width: 220px;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #3b4363;
+    border: none;
+    outline: none;
+    font-weight: 600;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+  .game-container .step-2-3-4 .house-selection {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    text-align: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+  .game-container .step-2-3-4 .house-selection .text {
+    text-align: center;
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 700;
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+    margin-bottom: 44px;
+  }
+  .game-container .step-2-3-4 .house-selection .wrapper {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .game-container .step-2-3-4 .house-selection .unknown {
+    background-color: #141539;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 0 auto 0 auto;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .rules {
+    text-align: none;
+    position: fixed;
+    right: 22px;
+    bottom: 10px;
+  }
+  .rules #rulesBtn {
+    border-radius: 8px;
+    background: none;
+    width: 160px;
+    padding: 8px;
+    border: 1px solid #fff;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.1rem;
+    outline: none;
+  }
+  .rules #rulesBtn:hover {
+    background-color: #fff;
+    color: #3b4363;
+    background: line;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .scissors-wrapper {
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    background: -webkit-gradient(linear, left top, left bottom, from(#ec9e0e), to(#eca922));
+    background: linear-gradient(#ec9e0e, #eca922);
+    padding: 18px;
+    border-bottom: 8px solid #c48003;
+  }
+  .scissors-wrapper .scissors {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background: white;
+    text-align: center;
+    padding: 10px;
+    border-top: 5px solid #ddd;
+  }
+  .scissors-wrapper .scissors #scissors {
+    margin: 8px auto;
+    width: 50%;
+  }
+  .paper-wrapper {
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    background: -webkit-gradient(linear, left top, left bottom, from(#4865f4), to(#5671f5));
+    background: linear-gradient(#4865f4, #5671f5);
+    padding: 18px;
+    border-bottom: 8px solid #2e45b8;
+  }
+  .paper-wrapper .paper {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background: white;
+    text-align: center;
+    padding: 10px;
+    border-top: 5px solid #ddd;
+  }
+  .paper-wrapper .paper #paper {
+    margin: 5px auto;
+    width: 50%;
+  }
+  .rock-wrapper {
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    background: -webkit-gradient(linear, left top, left bottom, from(#dc2e4e), to(#dd405d));
+    background: linear-gradient(#dc2e4e, #dd405d);
+    padding: 18px;
+    border-bottom: 8px solid #ac1b35;
+  }
+  .rock-wrapper .rock {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background: white;
+    text-align: center;
+    padding: 10px;
+    border-top: 5px solid #ddd;
+  }
+  .rock-wrapper .rock #rock {
+    margin: 4px auto;
+    width: 50%;
+  }
+  .game-container .step-1 {
     background-size: 220px;
     height: auto;
-    margin: 0px;
+    margin: 0;
+  }
+  .game-container .step-2-3-4 .house-selection {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+  .game-container .step-2-3-4 .house-selection .unknown {
+    width: 110px;
+    height: 110px;
+    margin: 10px auto;
   }
   .rules {
-<<<<<<< HEAD
-    margin-left: 18px;
-=======
     margin-left: 10px;
->>>>>>> core-game
   }
 }
 /*# sourceMappingURL=style.css.map */
