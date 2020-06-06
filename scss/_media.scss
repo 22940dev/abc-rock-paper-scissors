@@ -74,6 +74,15 @@
         }
     }
 }
+@media screen and (min-width: 619px) {
+    .game-container .step-2-3-4 .lose-win {
+        order: 2;
+        margin: 0px 0 52px 0;
+    }
+    .game-container .step-2-3-4 .lose-win .outcome {
+        font-size: 3.0rem;
+    }
+}
 @media screen and (min-width: 636px) {
     .game-container .step-2-3-4 .lose-win {
         text-align: center;
