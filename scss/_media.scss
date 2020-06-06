@@ -661,7 +661,7 @@
     $size: 65px;
     @include scissors($size, 8px);
     @include paper($size, 10px);
-    @include rock($size, 15px);
+    @include rock($size, 17px);
     .game-container {
         .step-1 {
             background-size: 220px;
