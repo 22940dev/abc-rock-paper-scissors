@@ -1,5 +1,4 @@
 @import "config";
-
 body {
     background: radial-gradient(circle, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
     font-family: BarlowSemiCondensed;
@@ -48,12 +47,11 @@ body {
 $size: 100px;
 @include scissors($size, 10px);
 @include paper($size, 10px);
-@include rock($size, 10px);
+@include rock($size, 18px);
 .game-container {
     margin-top: 54px;
     margin-bottom: 54px;
     .step-1 {
-        // display: none;
         background-image: url("../images/bg-triangle.svg");
         background-repeat: no-repeat;
         background-size: 220px;
@@ -87,15 +85,15 @@ $size: 100px;
                 padding: 10px;
                 border-top: 5px solid #ddd;
                 #paper {
-                    margin-top: -5px;
+                    margin-top: 5px;
                     margin-right: 2px;
-                    width: 85%;
+                    width: 65%;
                 }
             }
         }
         .scissors-wrapper {
             position: relative;
-            left: 188px;
+            left: 183px;
             top: -105px;
             width: ($size + 20px);
             height: ($size + 20px);
@@ -116,9 +114,9 @@ $size: 100px;
                 padding: 10px;
                 border-top: 5px solid #ddd;
                 #scissors {
-                    margin-top: -3px;
+                    margin-top: 3px;
                     margin-right: 2px;
-                    width: 85%;
+                    width: 65%;
                 }
             }
         }
@@ -146,14 +144,15 @@ $size: 100px;
                 padding: 10px;
                 border-top: 5px solid #ddd;
                 #rock {
-                    margin-top: -2px;
+                    margin-top: 8px;
                     margin-right: 2px;
-                    width: 85%;
+                    width: 65%;
                 }
             }
         }
     }
     .step-2-3-4 {
+        display: flex;
         display: none;
         flex-flow: row wrap;
         justify-content: space-evenly;
@@ -177,6 +176,7 @@ $size: 100px;
             order: 2;
             margin: 50px 0 52px 0;
             align-self: center;
+            transition:  display 0.5s ease-in;
             .outcome {
                 text-transform: uppercase;
                 color: #fff;
@@ -198,7 +198,6 @@ $size: 100px;
                 font-size: 1.2rem;
             }
         }
-
         .house-selection {
             display: flex;
             flex-flow: column nowrap;
@@ -212,22 +211,19 @@ $size: 100px;
                 font-size: 1.1rem;
                 font-weight: 700;
             }
-            .wrapper {
-                display: none;
-            }
             .unknown {
                 background-color: hsl(237, 49%, 15%);
                 width: 110px;
                 height: 110px;
                 border-radius: 50%;
-                margin: 10px auto;
-                // display: none;
+                margin: 0 auto;
             }
         }
     }
 }
 .text {
-    margin: 28px 8px;
+    margin: 0 8px;
+    margin-bottom: 0;
 }
 .rules {
     text-align: center;
