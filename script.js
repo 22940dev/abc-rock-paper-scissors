@@ -99,13 +99,11 @@ const initUser = (choice) => {
 
 // initializes the random choice made by the house
 const initHouse = (houseChoice) => {
-    houseTimeout = setTimeout(() => {
-        unkown.style.display = "none";
-        houseWrapper.id = `${houseChoice}-wrapper`;
-        houseWeapon.id = `${houseChoice}`;
-        houseWeaponImg.id = `${houseChoice}Img`;
-        houseWeaponImg.src = `images/icon-${houseChoice}.svg`;
-    }, 2000);
+    unkown.style.display = "none";
+    houseWrapper.id = `${houseChoice}-wrapper`;
+    houseWeapon.id = `${houseChoice}`;
+    houseWeaponImg.id = `${houseChoice}Img`;
+    houseWeaponImg.src = `images/icon-${houseChoice}.svg`;
 }
 
 // function that displays the winner of the game
