@@ -16,6 +16,10 @@ closeButton.addEventListener("click", () => {
 //         G     A     M     E
 // -----------------------------------
 
+// local storage
+if (!localStorage.getItem("score")) {
+    localStorage.getItem("score", 0);
+}
 // initializing game components
 let paper = document.querySelector("#paper-click");
 let scissors = document.querySelector("#scissors-click");
@@ -29,8 +33,9 @@ let loseWin = document.querySelector(".lose-win");
 let displayWinnerTimeout;
 let outcome = document.querySelector(".outcome");
 let playAgainBtn = document.getElementById("playAgain");
-let socre = document.getElementById("score");
-let points = 0;
+let score = document.getElementById("score");
+score.textContent = localStorage.getItem("score");
+let points = localStorage.getItem("score");
 
 // user components
 let wrapper = document.querySelector(".user-wrapper");
@@ -115,13 +120,14 @@ const displayWinner = (winner) => {
         if (winner === "user") {
             outcome.textContent = "you win";
             ++points;
-            socre.textContent = points;
-
+            score.textContent = points;
+            localStorage.setItem("score", points);
         } else if (winner == "cpu") {
             outcome.textContent = "THE HOUSE WINS";
             playAgainBtn.style.color = "red";
             --points;
-            socre.textContent = points;
+            localStorage.setItem("score", points);
+            score.textContent = points;
         } else {
             outcome.textContent = "IT'S A DRAW";
         }
