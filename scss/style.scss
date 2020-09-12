@@ -27,29 +27,28 @@ body {
       margin: 0;
       padding: 0;
     }
-  }
-  .score {
-    justify-self: end;
-    width: 70px;
-    margin: 10px 8px;
-    background-color: #fff;
-    border-radius: 6px;
-    text-align: center;
-    padding: 8px;
-    font-size: 0.9rem;
-    letter-spacing: 3px;
-    font-weight: 600;
-    color: hsl(229, 64%, 46%);
-    #score {
-      color: hsl(229, 25%, 31%);
-      font-size: 2.8rem;
-      margin: 0 4px;
-      font-weight: 700;
-      animation: score 400ms ease-in forwards;
+    .score {
+      justify-self: end;
+      width: 70px;
+      margin: 10px 8px;
+      background-color: #fff;
+      border-radius: 6px;
+      text-align: center;
+      padding: 8px;
+      font-size: 0.9rem;
+      letter-spacing: 3px;
+      font-weight: 600;
+      color: hsl(229, 64%, 46%);
+      #score {
+        color: hsl(229, 25%, 31%);
+        font-size: 2.8rem;
+        margin: 0 4px;
+        font-weight: 700;
+        animation: score 400ms ease-in forwards;
+      }
     }
   }
 }
-
 
 $size: 100px;
 @include scissors($size, 10px);
@@ -271,7 +270,6 @@ $size: 100px;
       margin: 0;
       padding: 0;
       top: 70vh;
-
       &:hover {
         cursor: pointer;
       }
