@@ -3,8 +3,96 @@
   font-family: BarlowSemiCondensed;
 }
 
+@-webkit-keyframes scoreboard {
+  0% {
+    -webkit-transform: translateX(-2000px);
+            transform: translateX(-2000px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes scoreboard {
+  0% {
+    -webkit-transform: translateX(-2000px);
+            transform: translateX(-2000px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes body {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0) rotate(-360deg);
+            transform: scale(0) rotate(-360deg);
+  }
+  50% {
+    opacity: 0.5;
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1) rotate(360deg);
+            transform: scale(1) rotate(360deg);
+  }
+}
+
+@keyframes body {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0) rotate(-360deg);
+            transform: scale(0) rotate(-360deg);
+  }
+  50% {
+    opacity: 0.5;
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1) rotate(360deg);
+            transform: scale(1) rotate(360deg);
+  }
+}
+
+@-webkit-keyframes score {
+  0% {
+    -webkit-transform: translateY(-12px);
+            transform: translateY(-12px);
+  }
+  50% {
+    -webkit-transform: translateY(-8px);
+            transform: translateY(-8px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes score {
+  0% {
+    -webkit-transform: translateY(-12px);
+            transform: translateY(-12px);
+  }
+  50% {
+    -webkit-transform: translateY(-8px);
+            transform: translateY(-8px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
 body {
-  background: radial-gradient(circle, #1f3756, #141539);
+  background: radial-gradient(circle, #1f3756, #141539) center center fixed;
   font-family: BarlowSemiCondensed;
   margin: 0;
   padding: 0;
@@ -16,9 +104,11 @@ body {
   display: grid;
   -ms-grid-columns: 70% 30%;
       grid-template-columns: 70% 30%;
-  border: 2px solid #606e85;
+  border: 3px solid #606e85;
   border-radius: 5px;
   margin: 40px auto;
+  -webkit-animation: scoreboard 400ms ease-out forwards;
+          animation: scoreboard 400ms ease-out forwards;
 }
 
 .scoreboard .rockpaperscissors {
@@ -55,6 +145,8 @@ body {
   font-size: 2.8rem;
   margin: 0 4px;
   font-weight: 700;
+  -webkit-animation: score 400ms ease-in forwards;
+          animation: score 400ms ease-in forwards;
 }
 
 #scissors-wrapper {
@@ -135,6 +227,8 @@ body {
 .game-container {
   margin-top: 54px;
   margin-bottom: 54px;
+  -webkit-animation: body 500ms ease-in forwards;
+          animation: body 500ms ease-in forwards;
 }
 
 .game-container .step-1 {
@@ -344,6 +438,8 @@ body {
   -webkit-box-ordinal-group: 4;
       -ms-flex-order: 3;
           order: 3;
+  -webkit-animation: body 400ms ease-out forwards;
+          animation: body 400ms ease-out forwards;
 }
 
 .game-container .step-2-3-4 .house-selection .text {
@@ -381,11 +477,6 @@ body {
   font-weight: 700;
   font-size: 1.1rem;
   outline: none;
-}
-
-.rules #rulesBtn:hover {
-  background-color: #fff;
-  color: #3b4363;
 }
 
 .modal {
@@ -799,19 +890,13 @@ body {
     font-size: 1.1rem;
     outline: none;
   }
-  .rules #rulesBtn:hover {
-    background-color: #fff;
-    color: #3b4363;
-    background: line;
-    cursor: pointer;
-  }
   .scoreboard {
     width: 50%;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 70% 30%;
         grid-template-columns: 70% 30%;
-    border: 2px solid #606e85;
+    border: 5px solid #606e85;
     border-radius: 5px;
     margin: 40px auto;
   }
@@ -1380,12 +1465,6 @@ body {
     font-weight: 700;
     font-size: 1.1rem;
     outline: none;
-  }
-  .rules #rulesBtn:hover {
-    background-color: #fff;
-    color: #3b4363;
-    background: line;
-    cursor: pointer;
   }
 }
 

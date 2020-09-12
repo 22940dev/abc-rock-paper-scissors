@@ -16,10 +16,6 @@ closeButton.addEventListener("click", () => {
 //         G     A     M     E
 // -----------------------------------
 
-// local storage
-if (!localStorage.getItem("score")) {
-    localStorage.getItem("score", 0);
-}
 // initializing game components
 let paper = document.querySelector("#paper-click");
 let scissors = document.querySelector("#scissors-click");
@@ -34,8 +30,16 @@ let displayWinnerTimeout;
 let outcome = document.querySelector(".outcome");
 let playAgainBtn = document.getElementById("playAgain");
 let score = document.getElementById("score");
-score.textContent = localStorage.getItem("score");
-let points = localStorage.getItem("score");
+// let points = localStorage.getItem("score") || 0;
+let points;
+if (localStorage.getItem("score") === null) {
+    localStorage.setItem("score", 0);
+    points = 0;
+} else {
+    points = Number(localStorage.getItem("score"));
+    score.textContent = points;
+}
+
 
 // user components
 let wrapper = document.querySelector(".user-wrapper");
@@ -55,12 +59,12 @@ const resetGame = () => {
     loseWin.style.display = "none";
     stepOne.style.display = "block";
     unkown.style.display = "block";
-    houseWrapper.id = ``;
-    houseWeapon.id = ``;
-    houseWeaponImg.id = ``;
-    houseWeaponImg.src = ``;
+    houseWrapper.id = "";
+    houseWeapon.id = "";
+    houseWeaponImg.id = "";
+    houseWeaponImg.src = "";
     playAgainBtn.style.color = "";
-}
+};
 
 // event listeners
 paper.addEventListener("click", () => {
@@ -68,7 +72,7 @@ paper.addEventListener("click", () => {
     houseChoice = randomWeapon();
     initUser(choice);
     initHouse(houseChoice);
-    winner = whoWins(choice, houseChoice);
+    let winner = whoWins(choice, houseChoice);
     displayWinner(winner);
 });
 
@@ -77,7 +81,7 @@ rock.addEventListener("click", () => {
     houseChoice = randomWeapon();
     initUser(choice);
     initHouse(houseChoice);
-    winner = whoWins(choice, houseChoice);
+    let winner = whoWins(choice, houseChoice);
     displayWinner(winner);
 });
 
@@ -86,7 +90,7 @@ scissors.addEventListener("click", () => {
     houseChoice = randomWeapon();
     initUser(choice);
     initHouse(houseChoice);
-    winner = whoWins(choice, houseChoice);
+    let winner = whoWins(choice, houseChoice);
     displayWinner(winner);
 });
 
@@ -104,7 +108,7 @@ const initUser = (choice) => {
 
 // initializes the random choice made by the house
 const initHouse = (houseChoice) => {
-    houseTimeout = setTimeout(() => {
+    houseTimeout = setTimeout(() => { 
         unkown.style.display = "none";
         houseWrapper.id = `${houseChoice}-wrapper`;
         houseWeapon.id = `${houseChoice}`;
@@ -126,10 +130,11 @@ const displayWinner = (winner) => {
             outcome.textContent = "THE HOUSE WINS";
             playAgainBtn.style.color = "red";
             --points;
-            localStorage.setItem("score", points);
             score.textContent = points;
+            localStorage.setItem("score", points);
         } else {
-            outcome.textContent = "IT'S A DRAW";
+            outcome.textContent = "IT'S A TIE";
+            localStorage.setItem("score", points);
         }
     }, 2000);
 }

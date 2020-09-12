@@ -1,299 +1,304 @@
 @import "config";
+@import "animations";
 body {
-    background: radial-gradient(circle, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
-    font-family: BarlowSemiCondensed;
-    margin: 0;
-    padding: 0;
+  background: radial-gradient(circle, hsl(214, 47%, 23%), hsl(237, 49%, 15%))
+    center center fixed;
+  font-family: BarlowSemiCondensed;
+  margin: 0;
+  padding: 0;
 }
+
 .scoreboard {
-    width: 90%;
-    display: grid;
-    grid-template-columns: 70% 30%;
-    border: 2px solid hsl(217, 16%, 45%);
-    border-radius: 5px;
-    margin: 40px auto;
-    .rockpaperscissors {
-        margin: auto 18px;
-        p {
-            color: #fff;
-            display: block;
-            line-height: 17px;
-            font-size: 1.2rem;
-            font-weight: 800;
-            margin: 0;
-            padding: 0;
-        }
+  width: 90%;
+  display: grid;
+  grid-template-columns: 70% 30%;
+  border: 3px solid hsl(217, 16%, 45%);
+  border-radius: 5px;
+  margin: 40px auto;
+  animation: scoreboard 400ms ease-out forwards;
+  .rockpaperscissors {
+    margin: auto 18px;
+    p {
+      color: #fff;
+      display: block;
+      line-height: 17px;
+      font-size: 1.2rem;
+      font-weight: 800;
+      margin: 0;
+      padding: 0;
     }
-    .score {
-        justify-self: end;
-        width: 70px;
-        margin: 10px 8px;
-        background-color: #fff;
-        border-radius: 6px;
-        text-align: center;
-        padding: 8px;
-        font-size: 0.9rem;
-        letter-spacing: 3px;
-        font-weight: 600;
-        color: hsl(229, 64%, 46%);
-        #score {
-            color: hsl(229, 25%, 31%);
-            font-size: 2.8rem;
-            margin: 0 4px;
-            font-weight: 700;
-        }
+  }
+  .score {
+    justify-self: end;
+    width: 70px;
+    margin: 10px 8px;
+    background-color: #fff;
+    border-radius: 6px;
+    text-align: center;
+    padding: 8px;
+    font-size: 0.9rem;
+    letter-spacing: 3px;
+    font-weight: 600;
+    color: hsl(229, 64%, 46%);
+    #score {
+      color: hsl(229, 25%, 31%);
+      font-size: 2.8rem;
+      margin: 0 4px;
+      font-weight: 700;
+      animation: score 400ms ease-in forwards;
     }
+  }
 }
+
+
 $size: 100px;
 @include scissors($size, 10px);
 @include paper($size, 10px);
 @include rock($size, 18px);
 .game-container {
-    margin-top: 54px;
-    margin-bottom: 54px;
-    .step-1 {
-        background-image: url("../images/bg-triangle.svg");
-        background-repeat: no-repeat;
-        background-size: 220px;
-        background-position: center;
-        width: 300px;
-        height: 400px;
-        height: auto;
-        margin: 20px auto 0 auto;
-        margin-top: 5%;
-        $size: 55px;
-        .paper-wrapper {
-            position: relative;
-            left: 12px;
-            top: 10px;
-            width: ($size + 20px);
-            height: ($size + 20px);
-            margin: 0;
-            border-radius: 50%;
-            background: linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
-            padding: 15px;
-            border-bottom: 8px solid hsl(230, 60%, 45%);
-            &:hover {
-                cursor: pointer;
-            }
-            .paper {
-                width: ($size);
-                height: ($size);
-                border-radius: 50%;
-                background: white;
-                text-align: center;
-                padding: 10px;
-                border-top: 5px solid #ddd;
-                #paper {
-                    margin-top: 5px;
-                    margin-right: 2px;
-                    width: 65%;
-                }
-            }
-        }
-        .scissors-wrapper {
-            position: relative;
-            left: 183px;
-            top: -105px;
-            width: ($size + 20px);
-            height: ($size + 20px);
-            margin: 0;
-            border-radius: 50%;
-            background: linear-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
-            padding: 15px;
-            border-bottom: 8px solid hsl(39, 97%, 39%);
-            &:hover {
-                cursor: pointer;
-            }
-            .scissors {
-                width: ($size);
-                height: ($size);
-                border-radius: 50%;
-                background: white;
-                text-align: center;
-                padding: 10px;
-                border-top: 5px solid #ddd;
-                #scissors {
-                    margin-top: 3px;
-                    margin-right: 2px;
-                    width: 65%;
-                }
-            }
-        }
-
-        .rock-wrapper {
-            position: relative;
-            left: 95px;
-            top: -48px;
-            width: ($size + 20px);
-            height: ($size + 20px);
-            margin: 0;
-            border-radius: 50%;
-            background: linear-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
-            padding: 15px;
-            border-bottom: 8px solid hsl(349, 73%, 39%);
-            &:hover {
-                cursor: pointer;
-            }
-            .rock {
-                width: ($size);
-                height: ($size);
-                border-radius: 50%;
-                background: white;
-                text-align: center;
-                padding: 10px;
-                border-top: 5px solid #ddd;
-                #rock {
-                    margin-top: 8px;
-                    margin-right: 2px;
-                    width: 65%;
-                }
-            }
-        }
-    }
-    .step-2-3-4 {
-        display: flex;
-        display: none;
-        flex-flow: row wrap;
-        justify-content: space-evenly;
-        .user-selection {
-            display: flex;
-            flex-flow: column nowrap;
-            text-align: center;
-            align-items: center;
-            order: 1;
-            .text {
-                text-align: center;
-                color: #fff;
-                font-size: 1.1rem;
-                font-weight: 700;
-                order: 2;
-            }
-        }
-        .lose-win {
-            display: none;
-            text-align: center;
-            order: 2;
-            margin: 50px 0 52px 0;
-            align-self: center;
-            transition:  display 0.5s ease-in;
-            .outcome {
-                text-transform: uppercase;
-                color: #fff;
-                font-weight: 700;
-                font-size: 3.4rem;
-                width: 300px;
-                letter-spacing: 0.2rem;
-                margin: 12px;
-            }
-            #playAgain {
-                padding: 18px;
-                width: 220px;
-                border-radius: 4px;
-                background-color: #fff;
-                color: $darkText;
-                border: none;
-                outline: none;
-                font-weight: 600;
-                font-size: 1.2rem;
-            }
-        }
-        .house-selection {
-            display: flex;
-            flex-flow: column nowrap;
-            text-align: center;
-            align-items: center;
-            text-align: center;
-            order: 3;
-            .text {
-                text-align: center;
-                color: #fff;
-                font-size: 1.1rem;
-                font-weight: 700;
-            }
-            .unknown {
-                background-color: hsl(237, 49%, 15%);
-                width: 110px;
-                height: 110px;
-                border-radius: 50%;
-                margin: 0 auto;
-            }
-        }
-    }
-}
-.text {
-    margin: 0 8px;
-    margin-bottom: 0;
-}
-.rules {
-    text-align: center;
-    margin-bottom: 20px;
-    #rulesBtn {
-        border-radius: 8px;
-        background: none;
-        width: 140px;
+  margin-top: 54px;
+  margin-bottom: 54px;
+  animation: body 500ms ease-in forwards;
+  .step-1 {
+    background-image: url("../images/bg-triangle.svg");
+    background-repeat: no-repeat;
+    background-size: 220px;
+    background-position: center;
+    width: 300px;
+    height: 400px;
+    height: auto;
+    margin: 20px auto 0 auto;
+    margin-top: 5%;
+    $size: 55px;
+    .paper-wrapper {
+      position: relative;
+      left: 12px;
+      top: 10px;
+      width: ($size + 20px);
+      height: ($size + 20px);
+      margin: 0;
+      border-radius: 50%;
+      background: linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+      padding: 15px;
+      border-bottom: 8px solid hsl(230, 60%, 45%);
+      &:hover {
+        cursor: pointer;
+      }
+      .paper {
+        width: ($size);
+        height: ($size);
+        border-radius: 50%;
+        background: white;
+        text-align: center;
         padding: 10px;
-        border: 1px solid #fff;
+        border-top: 5px solid #ddd;
+        #paper {
+          margin-top: 5px;
+          margin-right: 2px;
+          width: 65%;
+        }
+      }
+    }
+    .scissors-wrapper {
+      position: relative;
+      left: 183px;
+      top: -105px;
+      width: ($size + 20px);
+      height: ($size + 20px);
+      margin: 0;
+      border-radius: 50%;
+      background: linear-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+      padding: 15px;
+      border-bottom: 8px solid hsl(39, 97%, 39%);
+      &:hover {
+        cursor: pointer;
+      }
+      .scissors {
+        width: ($size);
+        height: ($size);
+        border-radius: 50%;
+        background: white;
+        text-align: center;
+        padding: 10px;
+        border-top: 5px solid #ddd;
+        #scissors {
+          margin-top: 3px;
+          margin-right: 2px;
+          width: 65%;
+        }
+      }
+    }
+
+    .rock-wrapper {
+      position: relative;
+      left: 95px;
+      top: -48px;
+      width: ($size + 20px);
+      height: ($size + 20px);
+      margin: 0;
+      border-radius: 50%;
+      background: linear-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+      padding: 15px;
+      border-bottom: 8px solid hsl(349, 73%, 39%);
+      &:hover {
+        cursor: pointer;
+      }
+      .rock {
+        width: ($size);
+        height: ($size);
+        border-radius: 50%;
+        background: white;
+        text-align: center;
+        padding: 10px;
+        border-top: 5px solid #ddd;
+        #rock {
+          margin-top: 8px;
+          margin-right: 2px;
+          width: 65%;
+        }
+      }
+    }
+  }
+  .step-2-3-4 {
+    display: flex;
+    display: none;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    .user-selection {
+      display: flex;
+      flex-flow: column nowrap;
+      text-align: center;
+      align-items: center;
+      order: 1;
+      .text {
+        text-align: center;
+        color: #fff;
+        font-size: 1.1rem;
+        font-weight: 700;
+        order: 2;
+      }
+    }
+    .lose-win {
+      display: none;
+      text-align: center;
+      order: 2;
+      margin: 50px 0 52px 0;
+      align-self: center;
+      transition: display 0.5s ease-in;
+      .outcome {
+        text-transform: uppercase;
         color: #fff;
         font-weight: 700;
-        font-size: 1.1rem;
+        font-size: 3.4rem;
+        width: 300px;
+        letter-spacing: 0.2rem;
+        margin: 12px;
+      }
+      #playAgain {
+        padding: 18px;
+        width: 220px;
+        border-radius: 4px;
+        background-color: #fff;
+        color: $darkText;
+        border: none;
         outline: none;
-        &:hover {
-            background-color: #fff;
-            color: $darkText;
-        }
+        font-weight: 600;
+        font-size: 1.2rem;
+      }
     }
+    .house-selection {
+      display: flex;
+      flex-flow: column nowrap;
+      text-align: center;
+      align-items: center;
+      text-align: center;
+      order: 3;
+      animation: body 400ms ease-out forwards;
+      .text {
+        text-align: center;
+        color: #fff;
+        font-size: 1.1rem;
+        font-weight: 700;
+      }
+      .unknown {
+        background-color: hsl(237, 49%, 15%);
+        width: 110px;
+        height: 110px;
+        border-radius: 50%;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+.text {
+  margin: 0 8px;
+  margin-bottom: 0;
+}
+.rules {
+  text-align: center;
+  margin-bottom: 20px;
+  #rulesBtn {
+    border-radius: 8px;
+    background: none;
+    width: 140px;
+    padding: 10px;
+    border: 1px solid #fff;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.1rem;
+    outline: none;
+  }
 }
 .modal {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  visibility: hidden;
+  &-content {
     background-color: #fff;
-    visibility: hidden;
-    &-content {
-        background-color: #fff;
-        margin: 45px 0 35px 0;
-        padding: 17px 0;
-        border-radius: 5px;
-        width: 100%;
-        text-align: center;
-        #icon-close {
-            position: relative;
-            z-index: 99;
-            width: 22px;
-            margin: 0;
-            padding: 0;
-            top: 70vh;
+    margin: 45px 0 35px 0;
+    padding: 17px 0;
+    border-radius: 5px;
+    width: 100%;
+    text-align: center;
+    #icon-close {
+      position: relative;
+      z-index: 99;
+      width: 22px;
+      margin: 0;
+      padding: 0;
+      top: 70vh;
 
-            &:hover {
-                cursor: pointer;
-            }
-        }
-        .rules-title {
-            color: $darkText;
-            padding: 0;
-            font-size: 1.5rem;
-            margin: 0;
-        }
-        #img-rules {
-            margin-top: 80px;
-            width: 250px;
-            z-index: -1;
-            padding: 0;
-        }
+      &:hover {
+        cursor: pointer;
+      }
     }
+    .rules-title {
+      color: $darkText;
+      padding: 0;
+      font-size: 1.5rem;
+      margin: 0;
+    }
+    #img-rules {
+      margin-top: 80px;
+      width: 250px;
+      z-index: -1;
+      padding: 0;
+    }
+  }
 }
 
 .show-modal {
-    visibility: visible;
+  visibility: visible;
 }
 .attribution {
-    font-size: 11px;
-    text-align: center;
+  font-size: 11px;
+  text-align: center;
 }
 .attribution a {
-    color: hsl(228, 45%, 44%);
+  color: hsl(228, 45%, 44%);
 }
 @import "media";
