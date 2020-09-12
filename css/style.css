@@ -693,6 +693,47 @@ body {
   }
 }
 
+@media screen and (max-width: 720px) {
+  .scoreboard {
+    width: 90%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 70% 30%;
+        grid-template-columns: 70% 30%;
+    border: 3px solid #606e85;
+    border-radius: 5px;
+    margin: 40px auto;
+  }
+  .scoreboard .rockpaperscissors {
+    margin: auto 18px;
+  }
+  .scoreboard .rockpaperscissors p {
+    color: #fff;
+    display: block;
+    line-height: 24px;
+    font-size: 1.2rem;
+    margin: 0;
+    padding: 0;
+  }
+  .scoreboard .score {
+    -ms-grid-column-align: end;
+        justify-self: end;
+    width: auto;
+    margin: 10px 16px;
+    background-color: #fff;
+    border-radius: 6px;
+    text-align: center;
+    padding: 5px 17px;
+    font-size: 1.2rem;
+    color: #2a46c0;
+  }
+  .scoreboard .score #score {
+    color: #3b4363;
+    font-size: 3.2rem;
+    margin: 0 4px;
+  }
+}
+
 @media screen and (min-width: 619px) {
   .game-container .step-2-3-4 .lose-win {
     -webkit-box-ordinal-group: 3;

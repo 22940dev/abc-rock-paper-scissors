@@ -74,6 +74,44 @@
     }
   }
 }
+
+@media screen and (max-width: 720px) {
+  .scoreboard {
+    width: 90%;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    border: 3px solid hsl(217, 16%, 45%);
+    border-radius: 5px;
+    margin: 40px auto;
+    .rockpaperscissors {
+      margin: auto 18px;
+      p {
+        color: #fff;
+        display: block;
+        line-height: 24px;
+        font-size: 1.2rem;
+        margin: 0;
+        padding: 0;
+      }
+    }
+    .score {
+      justify-self: end;
+      width: auto;
+      margin: 10px 16px;
+      background-color: #fff;
+      border-radius: 6px;
+      text-align: center;
+      padding: 5px 17px;
+      font-size: 1.2rem;
+      color: hsl(229, 64%, 46%);
+      #score {
+        color: hsl(229, 25%, 31%);
+        font-size: 3.2rem;
+        margin: 0 4px;
+      }
+    }
+  }
+}
 @media screen and (min-width: 619px) {
   .game-container .step-2-3-4 .lose-win {
     order: 2;
