@@ -1,682 +1,683 @@
 @media screen and (max-width: 635px) {
-    $size: 90px;
-    @include scissors($size, 10px);
-    @include paper($size, 10px);
-    @include rock($size, 10px);
-    .game-container {
-        margin-top: 54px;
-        .step-2-3-4 {
-            justify-content: space-around;
-            .user-selection {
-                display: flex;
-                flex-flow: column nowrap;
-                text-align: center;
-                align-items: center;
-                order: 1;
-                .text {
-                    text-align: center;
-                    color: #fff;
-                    font-size: 1.1rem;
-                    font-weight: 700;
-                    order: 2;
-                    margin-top: 12px;
-                }
-            }
-            .lose-win {
-                text-align: center;
-                order: 3;
-                margin: 50px 0 52px 0;
-                align-self: center;
-                .outcome {
-                    text-transform: uppercase;
-                    color: #fff;
-                    font-weight: 700;
-                    font-size: 3.4rem;
-                    width: 300px;
-                    letter-spacing: 0.2rem;
-                    margin: 12px;
-                }
-                #playAgain {
-                    padding: 18px;
-                    width: 220px;
-                    border-radius: 4px;
-                    background-color: #fff;
-                    color: $darkText;
-                    border: none;
-                    outline: none;
-                    font-weight: 600;
-                    font-size: 1.2rem;
-                }
-            }
-
-            .house-selection {
-                display: flex;
-                flex-flow: column nowrap;
-                text-align: center;
-                align-items: center;
-                text-align: center;
-                order: 2;
-                .text {
-                    text-align: center;
-                    color: #fff;
-                    font-size: 1.1rem;
-                    font-weight: 700;
-                    margin-top: 12px;
-                }
-                .unknown {
-                    background-color: hsl(237, 49%, 15%);
-                    width: 120px;
-                    height: 120px;
-                    border-radius: 50%;
-                    margin: auto;
-                }
-            }
+  $size: 90px;
+  @include scissors($size, 10px);
+  @include paper($size, 10px);
+  @include rock($size, 10px);
+  .game-container {
+    margin-top: 54px;
+    .step-2-3-4 {
+      justify-content: space-around;
+      .user-selection {
+        display: flex;
+        flex-flow: column nowrap;
+        text-align: center;
+        align-items: center;
+        order: 1;
+        .text {
+          text-align: center;
+          color: #fff;
+          font-size: 1.1rem;
+          font-weight: 700;
+          order: 2;
+          margin-top: 12px;
         }
-    }
-}
-@media screen and (min-width: 619px) {
-    .game-container .step-2-3-4 .lose-win {
-        order: 2;
-        margin: 0px 0 52px 0;
-    }
-    .game-container .step-2-3-4 .lose-win .outcome {
-        font-size: 3.0rem;
-    }
-}
-@media screen and (min-width: 636px) {
-    .game-container .step-2-3-4 .lose-win {
+      }
+      .lose-win {
+        text-align: center;
+        order: 3;
+        margin: 50px 0 52px 0;
+        align-self: center;
+        .outcome {
+          text-transform: uppercase;
+          color: #fff;
+          font-weight: 700;
+          font-size: 3.4rem;
+          width: 300px;
+          letter-spacing: 0.2rem;
+          margin: 12px;
+        }
+        #playAgain {
+          padding: 18px;
+          width: 220px;
+          border-radius: 4px;
+          background-color: #fff;
+          color: $darkText;
+          border: none;
+          outline: none;
+          font-weight: 600;
+          font-size: 1.2rem;
+        }
+      }
+
+      .house-selection {
+        display: flex;
+        flex-flow: column nowrap;
+        text-align: center;
+        align-items: center;
         text-align: center;
         order: 2;
-        margin: 0px 0 52px 0;
-        align-self: center;
-    }
-    .game-container {
-        .step-1 {
-            background-image: url("../images/bg-triangle.svg");
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: 290px 290px;
-            width: 300px;
-            height: 400px;
-            margin: 20px auto 0 auto;
-            margin-top: 5%;
-            $size: 100px;
-            .paper-wrapper {
-                position: relative;
-                left: -60px;
-                top: -28px;
-                width: ($size + 20px);
-                height: ($size + 20px);
-                border-radius: 50%;
-                background: linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
-                padding: 18px;
-                border-bottom: 8px solid hsl(230, 60%, 45%);
-                .paper {
-                    width: $size;
-                    height: $size;
-                    border-radius: 50%;
-                    background: white;
-                    text-align: center;
-                    padding: 10px;
-                    border-top: 5px solid #ddd;
-                    #paper {
-                        margin: 18px auto;
-                        width: 50%;
-                    }
-                }
-            }
-            .scissors-wrapper {
-                position: relative;
-                left: 200px;
-                top: -190px;
-                width: ($size + 20px);
-                height: ($size + 20px);
-                border-radius: 50%;
-                background: linear-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
-                padding: 18px;
-                border-bottom: 8px solid hsl(39, 97%, 39%);
-                .scissors {
-                    width: $size;
-                    height: $size;
-                    border-radius: 50%;
-                    background: white;
-                    text-align: center;
-                    padding: 10px;
-                    border-top: 5px solid #ddd;
-                    #scissors {
-                        margin: 18px auto;
-                        width: 50%;
-                    }
-                }
-            }
-            .rock-wrapper {
-                position: relative;
-                left: 70px;
-                top: -150px;
-                width: ($size + 20px);
-                height: ($size + 20px);
-                border-radius: 50%;
-                background: linear-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
-                padding: 18px;
-                border-bottom: 8px solid hsl(349, 73%, 39%);
-                .rock {
-                    width: $size;
-                    height: $size;
-                    border-radius: 50%;
-                    background: white;
-                    text-align: center;
-                    padding: 10px;
-                    border-top: 5px solid #ddd;
-                    #rock {
-                        margin: 26px auto;
-                        width: 50%;
-                    }
-                }
-            }
+        .text {
+          text-align: center;
+          color: #fff;
+          font-size: 1.1rem;
+          font-weight: 700;
+          margin-top: 12px;
         }
-        .step-2-3-4 {
-            .user-selection {
-                .text {
-                    margin-top: 14px;
-                    align-self: center;
-                }
-            }
-            .house-selection {
-                justify-content: start;
-                .unknown {
-                    width: 150px;
-                    height: 150px;
-                    margin: auto;
-                }
-                .text {
-                    margin-top: 9px;
-                }
-                .house-wrapper {
-                    margin-bottom: 5px;
-                }
-            }
+        .unknown {
+          background-color: hsl(237, 49%, 15%);
+          width: 120px;
+          height: 120px;
+          border-radius: 50%;
+          margin: auto;
         }
+      }
     }
+  }
+}
+@media screen and (min-width: 619px) {
+  .game-container .step-2-3-4 .lose-win {
+    order: 2;
+    margin: 0px 0 52px 0;
+  }
+  .game-container .step-2-3-4 .lose-win .outcome {
+    font-size: 3rem;
+  }
+}
+@media screen and (min-width: 636px) {
+  .game-container .step-2-3-4 .lose-win {
+    text-align: center;
+    order: 2;
+    margin: 0px 0 52px 0;
+    align-self: center;
+  }
+  .game-container {
+    .step-1 {
+      background-image: url("../images/bg-triangle.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 290px 290px;
+      width: 300px;
+      height: 400px;
+      margin: 20px auto 0 auto;
+      margin-top: 5%;
+      $size: 100px;
+      .paper-wrapper {
+        position: relative;
+        left: -60px;
+        top: -28px;
+        width: ($size + 20px);
+        height: ($size + 20px);
+        border-radius: 50%;
+        background: linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+        padding: 18px;
+        border-bottom: 8px solid hsl(230, 60%, 45%);
+        .paper {
+          width: $size;
+          height: $size;
+          border-radius: 50%;
+          background: white;
+          text-align: center;
+          padding: 10px;
+          border-top: 5px solid #ddd;
+          #paper {
+            margin: 18px auto;
+            width: 50%;
+          }
+        }
+      }
+      .scissors-wrapper {
+        position: relative;
+        left: 200px;
+        top: -190px;
+        width: ($size + 20px);
+        height: ($size + 20px);
+        border-radius: 50%;
+        background: linear-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+        padding: 18px;
+        border-bottom: 8px solid hsl(39, 97%, 39%);
+        .scissors {
+          width: $size;
+          height: $size;
+          border-radius: 50%;
+          background: white;
+          text-align: center;
+          padding: 10px;
+          border-top: 5px solid #ddd;
+          #scissors {
+            margin: 18px auto;
+            width: 50%;
+          }
+        }
+      }
+      .rock-wrapper {
+        position: relative;
+        left: 70px;
+        top: -150px;
+        width: ($size + 20px);
+        height: ($size + 20px);
+        border-radius: 50%;
+        background: linear-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+        padding: 18px;
+        border-bottom: 8px solid hsl(349, 73%, 39%);
+        .rock {
+          width: $size;
+          height: $size;
+          border-radius: 50%;
+          background: white;
+          text-align: center;
+          padding: 10px;
+          border-top: 5px solid #ddd;
+          #rock {
+            margin: 26px auto;
+            width: 50%;
+          }
+        }
+      }
+    }
+    .step-2-3-4 {
+      .user-selection {
+        .text {
+          margin-top: 14px;
+          align-self: center;
+        }
+      }
+      .house-selection {
+        justify-content: start;
+        .unknown {
+          width: 150px;
+          height: 150px;
+          margin: auto;
+        }
+        .text {
+          margin-top: 9px;
+        }
+        .house-wrapper {
+          margin-bottom: 5px;
+        }
+      }
+    }
+  }
 }
 @media screen and (min-width: 720px) {
-    .modal {
-        position: fixed;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        background-color: rgba(0, 0, 0, 0.4);
-        &-content {
-            position: relative;
-            top: 25%;
-            background-color: #fff;
-            margin: auto auto;
-            border-radius: 5px;
-            width: 320px;
-            text-align: center;
-            #icon-close {
-                position: absolute;
-                top: 28px;
-                width: 20px;
-                margin-left: 53px;
-                padding: 0;
-            }
-            .rules-title {
-                color: $darkText;
-                padding: 0;
-                font-size: 1.5rem;
-                margin-left: 18px;
-                margin-top: 10px;
-                float: left;
-            }
-            #img-rules {
-                margin-top: 40px;
-                width: 250px;
-                z-index: -1;
-                padding: 0;
-            }
-        }
+  .modal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    &-content {
+      position: relative;
+      top: 25%;
+      background-color: #fff;
+      margin: auto auto;
+      border-radius: 5px;
+      width: 320px;
+      text-align: center;
+      #icon-close {
+        position: absolute;
+        top: 28px;
+        width: 20px;
+        margin-left: 53px;
+        padding: 0;
+      }
+      .rules-title {
+        color: $darkText;
+        padding: 0;
+        font-size: 1.5rem;
+        margin-left: 18px;
+        margin-top: 10px;
+        float: left;
+      }
+      #img-rules {
+        margin-top: 40px;
+        width: 250px;
+        z-index: -1;
+        padding: 0;
+      }
     }
+  }
 
-    .rules {
-        text-align: none;
-        position: relative;
-        right: 22px;
-        bottom: 15px;
-        float: right;
-        #rulesBtn {
-            border-radius: 8px;
-            background: none;
-            width: 160px;
-            padding: 8px;
-            border: 1px solid #fff;
-            color: #fff;
-            font-weight: 700;
-            font-size: 1.1rem;
-            outline: none;
-        }
+  .rules {
+    text-align: none;
+    position: relative;
+    right: 22px;
+    bottom: 15px;
+    float: right;
+    #rulesBtn {
+      border-radius: 8px;
+      background: none;
+      width: 160px;
+      padding: 8px;
+      border: 1px solid #fff;
+      color: #fff;
+      font-weight: 700;
+      font-size: 1.1rem;
+      outline: none;
     }
-    .scoreboard {
-        width: 50%;
-        display: grid;
-        grid-template-columns: 70% 30%;
-        border: 5px solid hsl(217, 16%, 45%);
-        border-radius: 5px;
-        margin: 40px auto;
-        .rockpaperscissors {
-            margin: auto 18px;
-            p {
-                color: #fff;
-                display: block;
-                line-height: 24px;
-                font-size: 1.8rem;
-                margin: 0;
-                padding: 0;
-            }
-        }
-        .score {
-            justify-self: end;
-            width: auto;
-            margin: 10px 16px;
-            background-color: #fff;
-            border-radius: 6px;
-            text-align: center;
-            padding: 5px 17px;
-            font-size: 1.2rem;
-            color: hsl(229, 64%, 46%);
-            #score {
-                color: hsl(229, 25%, 31%);
-                font-size: 3.8rem;
-                margin: 0 4px;
-            }
-        }
+  }
+  .scoreboard {
+    width: 50%;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    border: 5px solid hsl(217, 16%, 45%);
+    border-radius: 5px;
+    margin: 40px auto;
+    .rockpaperscissors {
+      margin: auto 18px;
+      p {
+        color: #fff;
+        display: block;
+        line-height: 24px;
+        font-size: 1.8rem;
+        margin: 0;
+        padding: 0;
+      }
     }
+    .score {
+      justify-self: end;
+      width: auto;
+      margin: 10px 16px;
+      background-color: #fff;
+      border-radius: 6px;
+      text-align: center;
+      padding: 5px 17px;
+      font-size: 1.2rem;
+      color: hsl(229, 64%, 46%);
+      #score {
+        color: hsl(229, 25%, 31%);
+        font-size: 3.8rem;
+        margin: 0 4px;
+      }
+    }
+  }
+  $size: 120px;
+  @include scissors($size, 23px);
+  @include paper($size, 20px);
+  @include rock($size, 20px);
+  .game-container {
+    // size variable
     $size: 120px;
-    @include scissors($size, 23px);
-    @include paper($size, 20px);
-    @include rock($size, 20px);
-    .game-container {
-        // size variable
-        $size: 120px;
-        margin-top: 64px;
-        margin-bottom: 75px;
-        .step-1 {
-            background-image: url("../images/bg-triangle.svg");
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: 320px 290px;
-            width: 300px;
-            height: 400px;
-            margin: 20px auto 0 auto;
-            margin-top: 5%;
-            .paper-wrapper {
-                position: relative;
-                left: -68px;
-                top: -28px;
-                width: ($size + 20px);
-                height: ($size + 20px);
-                border-radius: 50%;
-                background: linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
-                padding: 18px;
-                border-bottom: 8px solid hsl(230, 60%, 45%);
-                .paper {
-                    width: $size;
-                    height: $size;
-                    border-radius: 50%;
-                    background: white;
-                    text-align: center;
-                    padding: 10px;
-                    border-top: 5px solid #ddd;
-                    #paper {
-                        margin: 18px auto;
-                        width: 50%;
-                    }
-                }
-            }
-            .scissors-wrapper {
-                position: relative;
-                left: 200px;
-                top: -210px;
-                width: ($size + 20px);
-                height: ($size + 20px);
-                border-radius: 50%;
-                background: linear-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
-                padding: 18px;
-                border-bottom: 8px solid hsl(39, 97%, 39%);
-                .scissors {
-                    width: $size;
-                    height: $size;
-                    border-radius: 50%;
-                    background: white;
-                    text-align: center;
-                    padding: 10px;
-                    border-top: 5px solid #ddd;
-                    #scissors {
-                        margin: 18px auto;
-                        width: 50%;
-                    }
-                }
-            }
-            .rock-wrapper {
-                position: relative;
-                left: 60px;
-                top: -165px;
-                width: ($size + 20px);
-                height: ($size + 20px);
-                border-radius: 50%;
-                background: linear-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
-                padding: 18px;
-                border-bottom: 8px solid hsl(349, 73%, 39%);
-                .rock {
-                    width: $size;
-                    height: $size;
-                    border-radius: 50%;
-                    background: white;
-                    text-align: center;
-                    padding: 10px;
-                    border-top: 5px solid #ddd;
-                    #rock {
-                        margin: 26px auto;
-                        width: 50%;
-                    }
-                }
-            }
+    margin-top: 64px;
+    margin-bottom: 75px;
+    .step-1 {
+      background-image: url("../images/bg-triangle.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 320px 290px;
+      width: 300px;
+      height: 400px;
+      margin: 20px auto 0 auto;
+      margin-top: 5%;
+      .paper-wrapper {
+        position: relative;
+        left: -68px;
+        top: -28px;
+        width: ($size + 20px);
+        height: ($size + 20px);
+        border-radius: 50%;
+        background: linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+        padding: 18px;
+        border-bottom: 8px solid hsl(230, 60%, 45%);
+        .paper {
+          width: $size;
+          height: $size;
+          border-radius: 50%;
+          background: white;
+          text-align: center;
+          padding: 10px;
+          border-top: 5px solid #ddd;
+          #paper {
+            margin: 18px auto;
+            width: 50%;
+          }
         }
-        .step-2-3-4 {
-            flex-flow: row wrap;
-            justify-content: space-evenly;
-            margin: 12px;
-            .user-selection {
-                order: 1;
-                display: flex;
-                flex-flow: column-reverse nowrap;
-                align-items: center;
-                .wrapper {
-                    order: 1;
-                }
-                .text {
-                    text-align: center;
-                    color: #fff;
-                    font-size: 1.4rem;
-                    font-weight: 700;
-                    order: 0;
-                    margin-bottom: 50px;
-                    justify-self: flex-start;
-                }
-            }
-            .lose-win {
-                text-align: center;
-                order: 2;
-                margin-top: 32px;
-                align-self: center;
-                .outcome {
-                    text-transform: uppercase;
-                    color: #fff;
-                    font-weight: 700;
-                    font-size: 3.4rem;
-                    width: 300px;
-                    letter-spacing: 0.2rem;
-                }
-                #playAgain {
-                    padding: 18px;
-                    width: 220px;
-                    border-radius: 4px;
-                    background-color: #fff;
-                    color: $darkText;
-                    border: none;
-                    outline: none;
-                    font-weight: 600;
-                    font-size: 1.2rem;
-                    cursor: pointer;
-                }
-            }
-
-            .house-selection {
-                order: 3;
-                display: flex;
-                flex-flow: column-reverse nowrap;
-                text-align: center;
-                align-items: center;
-                justify-content: center;
-                .text {
-                    text-align: center;
-                    color: #fff;
-                    font-size: 1.4rem;
-                    font-weight: 700;
-                    order: 0;
-                    margin-bottom: 44px;
-                    justify-self: flex-start;
-                }
-                .unknown {
-                    background-color: hsl(237, 49%, 15%);
-                    width: 160px;
-                    height: 160px;
-                    border-radius: 50%;
-                    margin: 12px auto;
-                }
-            }
+      }
+      .scissors-wrapper {
+        position: relative;
+        left: 200px;
+        top: -210px;
+        width: ($size + 20px);
+        height: ($size + 20px);
+        border-radius: 50%;
+        background: linear-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+        padding: 18px;
+        border-bottom: 8px solid hsl(39, 97%, 39%);
+        .scissors {
+          width: $size;
+          height: $size;
+          border-radius: 50%;
+          background: white;
+          text-align: center;
+          padding: 10px;
+          border-top: 5px solid #ddd;
+          #scissors {
+            margin: 18px auto;
+            width: 50%;
+          }
         }
+      }
+      .rock-wrapper {
+        position: relative;
+        left: 60px;
+        top: -165px;
+        width: ($size + 20px);
+        height: ($size + 20px);
+        border-radius: 50%;
+        background: linear-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+        padding: 18px;
+        border-bottom: 8px solid hsl(349, 73%, 39%);
+        .rock {
+          width: $size;
+          height: $size;
+          border-radius: 50%;
+          background: white;
+          text-align: center;
+          padding: 10px;
+          border-top: 5px solid #ddd;
+          #rock {
+            margin: 26px auto;
+            width: 50%;
+          }
+        }
+      }
     }
+    .step-2-3-4 {
+      flex-flow: row wrap;
+      justify-content: space-evenly;
+      margin: 12px;
+      .user-selection {
+        order: 1;
+        display: flex;
+        flex-flow: column-reverse nowrap;
+        align-items: center;
+        .wrapper {
+          order: 1;
+        }
+        .text {
+          text-align: center;
+          color: #fff;
+          font-size: 1.4rem;
+          font-weight: 700;
+          order: 0;
+          margin-bottom: 50px;
+          justify-self: flex-start;
+        }
+      }
+      .lose-win {
+        text-align: center;
+        order: 2;
+        margin-top: 32px;
+        align-self: center;
+        .outcome {
+          text-transform: uppercase;
+          color: #fff;
+          font-weight: 700;
+          font-size: 3.4rem;
+          width: 300px;
+          letter-spacing: 0.2rem;
+        }
+        #playAgain {
+          padding: 18px;
+          width: 220px;
+          border-radius: 4px;
+          background-color: #fff;
+          color: $darkText;
+          border: none;
+          outline: none;
+          font-weight: 600;
+          font-size: 1.2rem;
+          cursor: pointer;
+        }
+      }
+
+      .house-selection {
+        order: 3;
+        display: flex;
+        flex-flow: column-reverse nowrap;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        .text {
+          text-align: center;
+          color: #fff;
+          font-size: 1.4rem;
+          font-weight: 700;
+          order: 0;
+          margin-bottom: 44px;
+          justify-self: flex-start;
+        }
+        .unknown {
+          background-color: hsl(237, 49%, 15%);
+          width: 160px;
+          height: 160px;
+          border-radius: 50%;
+          margin: 12px auto;
+        }
+      }
+    }
+  }
 }
 @media screen and (min-width: 1000px) {
-    $size: 160px;
-    @include scissors($size, 33px);
-    @include paper($size, 30px);
-    @include rock($size, 40px);
-    .game-container {
-        // size variable
-        $size: 120px;
-        margin-top: 64px;
-        margin-bottom: 45px;
-        .step-1 {
-            background-image: url("../images/bg-triangle.svg");
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: 320px 290px;
-            width: 300px;
-            height: 400px;
-            margin: 20px auto 0 auto;
-            margin-top: 5%;
-            .paper-wrapper {
-                position: relative;
-                left: -68px;
-                top: -28px;
-                width: ($size + 20px);
-                height: ($size + 20px);
-                border-radius: 50%;
-                background: linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
-                padding: 18px;
-                border-bottom: 8px solid hsl(230, 60%, 45%);
-                .paper {
-                    width: $size;
-                    height: $size;
-                    border-radius: 50%;
-                    background: white;
-                    text-align: center;
-                    padding: 10px;
-                    border-top: 5px solid #ddd;
-                    #paper {
-                        margin: 18px auto;
-                        width: 50%;
-                    }
-                }
-            }
-            .scissors-wrapper {
-                position: relative;
-                left: 200px;
-                top: -210px;
-                width: ($size + 20px);
-                height: ($size + 20px);
-                border-radius: 50%;
-                background: linear-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
-                padding: 18px;
-                border-bottom: 8px solid hsl(39, 97%, 39%);
-                .scissors {
-                    width: $size;
-                    height: $size;
-                    border-radius: 50%;
-                    background: white;
-                    text-align: center;
-                    padding: 10px;
-                    border-top: 5px solid #ddd;
-                    #scissors {
-                        margin: 18px auto;
-                        width: 50%;
-                    }
-                }
-            }
-            .rock-wrapper {
-                position: relative;
-                left: 60px;
-                top: -165px;
-                width: ($size + 20px);
-                height: ($size + 20px);
-                border-radius: 50%;
-                background: linear-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
-                padding: 18px;
-                border-bottom: 8px solid hsl(349, 73%, 39%);
-                .rock {
-                    width: $size;
-                    height: $size;
-                    border-radius: 50%;
-                    background: white;
-                    text-align: center;
-                    padding: 10px;
-                    border-top: 5px solid #ddd;
-                    #rock {
-                        margin: 26px auto;
-                        width: 50%;
-                    }
-                }
-            }
+  $size: 160px;
+  @include scissors($size, 33px);
+  @include paper($size, 30px);
+  @include rock($size, 40px);
+  .game-container {
+    // size variable
+    $size: 130px;
+    margin-top: 64px;
+    margin-bottom: 45px;
+    .step-1 {
+      background-image: url("../images/bg-triangle.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 320px 290px;
+      width: 300px;
+      height: 400px;
+      margin: 20px auto 0 auto;
+      margin-top: 5%;
+      .paper-wrapper {
+        position: relative;
+        left: -58px;
+        top: -28px;
+        width: ($size + 20px);
+        height: ($size + 20px);
+        border-radius: 50%;
+        background: linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+        padding: 18px;
+        border-bottom: 8px solid hsl(230, 60%, 45%);
+        .paper {
+          width: $size;
+          height: $size;
+          border-radius: 50%;
+          background: white;
+          text-align: center;
+          padding: 10px;
+          border-top: 5px solid #ddd;
+          #paper {
+            margin: 18px auto;
+            width: 50%;
+          }
         }
-
-        .step-2-3-4 {
-            flex-flow: row wrap;
-            justify-content: space-evenly;
-            .user-selection {
-                order: 1;
-                display: flex;
-                flex-flow: column-reverse nowrap;
-                .wrapper {
-                    order: 1;
-                }
-                .text {
-                    text-align: center;
-                    color: #fff;
-                    font-size: 1.6rem;
-                    font-weight: 700;
-                    order: 0;
-                    margin-bottom: 49px;
-                }
-            }
-            .lose-win {
-                text-align: center;
-                order: 2;
-                align-self: center;
-                .outcome {
-                    text-transform: uppercase;
-                    color: #fff;
-                    font-weight: 700;
-                    font-size: 3.4rem;
-                    width: 300px;
-                    letter-spacing: 0.2rem;
-                }
-                #playAgain {
-                    padding: 18px;
-                    width: 220px;
-                    border-radius: 4px;
-                    background-color: #fff;
-                    color: $darkText;
-                    border: none;
-                    outline: none;
-                    font-weight: 600;
-                    font-size: 1.2rem;
-                    cursor: pointer;
-                }
-            }
-
-            .house-selection {
-                order: 3;
-                display: flex;
-                flex-flow: column-reverse nowrap;
-                text-align: center;
-                .text {
-                    text-align: center;
-                    color: #fff;
-                    font-size: 1.6rem;
-                    font-weight: 700;
-                    margin-bottom: 44px;
-                    margin-top: 20px;
-                    order: 1;
-                }
-                .unknown {
-                    background-color: hsl(237, 49%, 15%);
-                    width: 200px;
-                    height: 200px;
-                    border-radius: 50%;
-                    margin: 0 auto 0 auto;
-                    margin-top: 23px;
-                }
-            }
+      }
+      .scissors-wrapper {
+        position: relative;
+        left: 190px;
+        top: -218px;
+        width: ($size + 20px);
+        height: ($size + 20px);
+        border-radius: 50%;
+        background: linear-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+        padding: 18px;
+        border-bottom: 8px solid hsl(39, 97%, 39%);
+        .scissors {
+          width: $size;
+          height: $size;
+          border-radius: 50%;
+          background: white;
+          text-align: center;
+          padding: 10px;
+          border-top: 5px solid #ddd;
+          #scissors {
+            margin: 18px auto;
+            width: 50%;
+          }
         }
+      }
+      .rock-wrapper {
+        position: relative;
+        left: 58px;
+        top: -195px;
+        width: ($size + 20px);
+        height: ($size + 20px);
+        border-radius: 50%;
+        background: linear-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+        padding: 18px;
+        border-bottom: 8px solid hsl(349, 73%, 39%);
+        .rock {
+          width: $size;
+          height: $size;
+          border-radius: 50%;
+          background: white;
+          text-align: center;
+          padding: 10px;
+          border-top: 5px solid #ddd;
+          #rock {
+            margin: 26px auto;
+            width: 50%;
+          }
+        }
+      }
     }
+
+    .step-2-3-4 {
+      flex-flow: row wrap;
+      justify-content: space-evenly;
+      .user-selection {
+        order: 1;
+        display: flex;
+        flex-flow: column-reverse nowrap;
+        .wrapper {
+          order: 1;
+        }
+        .text {
+          text-align: center;
+          color: #fff;
+          font-size: 1.6rem;
+          font-weight: 700;
+          order: 0;
+          margin-bottom: 49px;
+        }
+      }
+      .lose-win {
+        text-align: center;
+        order: 2;
+        align-self: center;
+        .outcome {
+          text-transform: uppercase;
+          color: #fff;
+          font-weight: 700;
+          font-size: 3.4rem;
+          width: 300px;
+          letter-spacing: 0.2rem;
+        }
+        #playAgain {
+          padding: 18px;
+          width: 220px;
+          border-radius: 4px;
+          background-color: #fff;
+          color: $darkText;
+          border: none;
+          outline: none;
+          font-weight: 600;
+          font-size: 1.2rem;
+          cursor: pointer;
+        }
+      }
+
+      .house-selection {
+        order: 3;
+        display: flex;
+        flex-flow: column-reverse nowrap;
+        text-align: center;
+        .text {
+          text-align: center;
+          color: #fff;
+          font-size: 1.6rem;
+          font-weight: 700;
+          margin-bottom: 44px;
+          margin-top: 20px;
+          order: 1;
+        }
+        .unknown {
+          background-color: hsl(237, 49%, 15%);
+          width: 200px;
+          height: 200px;
+          border-radius: 50%;
+          margin: 0 auto 0 auto;
+          margin-top: 23px;
+        }
+      }
+    }
+  }
 }
 // for larger screens
 @media screen and (min-width: 1300px) {
-    .rules {
-        text-align: none;
-        position: fixed;
-        right: 22px;
-        bottom: 10px;
-        #rulesBtn {
-            border-radius: 8px;
-            background: none;
-            width: 160px;
-            padding: 8px;
-            border: 1px solid #fff;
-            color: #fff;
-            font-weight: 700;
-            font-size: 1.1rem;
-            outline: none;
-        }
+  .rules {
+    text-align: none;
+    position: fixed;
+    right: 22px;
+    bottom: 10px;
+    position: fixed;
+    #rulesBtn {
+      border-radius: 8px;
+      background: none;
+      width: 160px;
+      padding: 8px;
+      border: 1px solid #fff;
+      color: #fff;
+      font-weight: 700;
+      font-size: 1.1rem;
+      outline: none;
     }
+  }
 }
 // for very small screens
 @media screen and (max-width: 330px) {
-    $size: 65px;
-    @include scissors($size, 8px);
-    @include paper($size, 10px);
-    @include rock($size, 17px);
-    .game-container {
-        .step-1 {
-            background-size: 220px;
-            height: auto;
-        }
-        .step-2-3-4 {
-            .house-selection {
-                justify-content: start;
-                .unknown {
-                    width: 110px;
-                    height: 110px;
-                    margin: 10px auto;
-                    margin-bottom: 9px;
-                }
-            }
-            .lose-win {
-                .outcome {
-                    text-transform: uppercase;
-                    color: #fff;
-                    font-weight: 700;
-                    font-size: 3.1rem;
-                    width: 300px;
-                    letter-spacing: 0.2rem;
-                    margin: 12px;
-                }
-            }
-        }
-        .rules {
-            margin-left: 10px;
-        }
+  $size: 65px;
+  @include scissors($size, 8px);
+  @include paper($size, 10px);
+  @include rock($size, 17px);
+  .game-container {
+    .step-1 {
+      background-size: 220px;
+      height: auto;
     }
+    .step-2-3-4 {
+      .house-selection {
+        justify-content: start;
+        .unknown {
+          width: 110px;
+          height: 110px;
+          margin: 10px auto;
+          margin-bottom: 9px;
+        }
+      }
+      .lose-win {
+        .outcome {
+          text-transform: uppercase;
+          color: #fff;
+          font-weight: 700;
+          font-size: 3.1rem;
+          width: 300px;
+          letter-spacing: 0.2rem;
+          margin: 12px;
+        }
+      }
+    }
+    .rules {
+      margin-left: 10px;
+    }
+  }
 }

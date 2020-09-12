@@ -23,14 +23,12 @@
   }
 }
 
-@keyframes score {
+
+@keyframes modal {
   0% {
-      transform: translateY(-12px);
-  }
-  50% {
-      transform: translateY(-8px)
+    transform: translateY(2000px);
   }
   100% {
-      transform: translateY(0);
+    transform: translateY(0);
   }
 }

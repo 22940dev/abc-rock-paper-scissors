@@ -65,7 +65,6 @@ $size: 100px;
     background-size: 220px;
     background-position: center;
     width: 300px;
-    height: 400px;
     height: auto;
     margin: 20px auto 0 auto;
     margin-top: 5%;
@@ -247,6 +246,7 @@ $size: 100px;
     font-weight: 700;
     font-size: 1.1rem;
     outline: none;
+    cursor: pointer;
   }
 }
 .modal {

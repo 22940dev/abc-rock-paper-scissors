@@ -61,14 +61,10 @@
   }
 }
 
-@-webkit-keyframes score {
+@-webkit-keyframes modal {
   0% {
-    -webkit-transform: translateY(-12px);
-            transform: translateY(-12px);
-  }
-  50% {
-    -webkit-transform: translateY(-8px);
-            transform: translateY(-8px);
+    -webkit-transform: translateY(2000px);
+            transform: translateY(2000px);
   }
   100% {
     -webkit-transform: translateY(0);
@@ -76,14 +72,10 @@
   }
 }
 
-@keyframes score {
+@keyframes modal {
   0% {
-    -webkit-transform: translateY(-12px);
-            transform: translateY(-12px);
-  }
-  50% {
-    -webkit-transform: translateY(-8px);
-            transform: translateY(-8px);
+    -webkit-transform: translateY(2000px);
+            transform: translateY(2000px);
   }
   100% {
     -webkit-transform: translateY(0);
@@ -237,7 +229,6 @@ body {
   background-size: 220px;
   background-position: center;
   width: 300px;
-  height: 400px;
   height: auto;
   margin: 20px auto 0 auto;
   margin-top: 5%;
@@ -477,6 +468,7 @@ body {
   font-weight: 700;
   font-size: 1.1rem;
   outline: none;
+  cursor: pointer;
 }
 
 .modal {
@@ -709,7 +701,7 @@ body {
     margin: 0px 0 52px 0;
   }
   .game-container .step-2-3-4 .lose-win .outcome {
-    font-size: 3.0rem;
+    font-size: 3rem;
   }
 }
 
@@ -1276,10 +1268,10 @@ body {
   }
   .game-container .step-1 .paper-wrapper {
     position: relative;
-    left: -68px;
+    left: -58px;
     top: -28px;
-    width: 140px;
-    height: 140px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     background: -webkit-gradient(linear, left top, left bottom, from(#4865f4), to(#5671f5));
     background: linear-gradient(#4865f4, #5671f5);
@@ -1287,8 +1279,8 @@ body {
     border-bottom: 8px solid #2e45b8;
   }
   .game-container .step-1 .paper-wrapper .paper {
-    width: 120px;
-    height: 120px;
+    width: 130px;
+    height: 130px;
     border-radius: 50%;
     background: white;
     text-align: center;
@@ -1301,10 +1293,10 @@ body {
   }
   .game-container .step-1 .scissors-wrapper {
     position: relative;
-    left: 200px;
-    top: -210px;
-    width: 140px;
-    height: 140px;
+    left: 190px;
+    top: -218px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     background: -webkit-gradient(linear, left top, left bottom, from(#ec9e0e), to(#eca922));
     background: linear-gradient(#ec9e0e, #eca922);
@@ -1312,8 +1304,8 @@ body {
     border-bottom: 8px solid #c48003;
   }
   .game-container .step-1 .scissors-wrapper .scissors {
-    width: 120px;
-    height: 120px;
+    width: 130px;
+    height: 130px;
     border-radius: 50%;
     background: white;
     text-align: center;
@@ -1326,10 +1318,10 @@ body {
   }
   .game-container .step-1 .rock-wrapper {
     position: relative;
-    left: 60px;
-    top: -165px;
-    width: 140px;
-    height: 140px;
+    left: 58px;
+    top: -195px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     background: -webkit-gradient(linear, left top, left bottom, from(#dc2e4e), to(#dd405d));
     background: linear-gradient(#dc2e4e, #dd405d);
@@ -1337,8 +1329,8 @@ body {
     border-bottom: 8px solid #ac1b35;
   }
   .game-container .step-1 .rock-wrapper .rock {
-    width: 120px;
-    height: 120px;
+    width: 130px;
+    height: 130px;
     border-radius: 50%;
     background: white;
     text-align: center;
@@ -1454,6 +1446,7 @@ body {
     position: fixed;
     right: 22px;
     bottom: 10px;
+    position: fixed;
   }
   .rules #rulesBtn {
     border-radius: 8px;

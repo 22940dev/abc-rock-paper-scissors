@@ -1,80 +1,79 @@
-// TODO: add font file
 @font-face {
-    src: url("../fonts/BarlowSemiCondensed-Regular.ttf");
-    font-family: BarlowSemiCondensed;
+  src: url("../fonts/BarlowSemiCondensed-Regular.ttf");
+  font-family: BarlowSemiCondensed;
 }
 $darkText: hsl(229, 25%, 31%);
 $scoreText: hsl(229, 64%, 46%);
 $headerOutline: hsl(217, 16%, 45%);
 
 @mixin paper($size, $margin) {
-    #paper-wrapper {
-        width: ($size + 20px);
-        height: ($size + 20px);
-        border-radius: 50%;
-        background: linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
-        padding: 18px;
-        border-bottom: 8px solid hsl(230, 60%, 45%);
-        #paper {
-            width: $size;
-            height: $size;
-            border-radius: 50%;
-            background: white;
-            text-align: center;
-            padding: 10px;
-            border-top: 5px solid #ddd;
-            #paperImg {
-                margin: $margin auto;
-                width: 50%;
-            }
-        }
+  #paper-wrapper {
+    width: ($size + 20px);
+    height: ($size + 20px);
+    border-radius: 50%;
+    background: linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+    padding: 18px;
+    border-bottom: 8px solid hsl(230, 60%, 45%);
+    #paper {
+      width: $size;
+      height: $size;
+      border-radius: 50%;
+      background: white;
+      text-align: center;
+      padding: 10px;
+      border-top: 5px solid #ddd;
+      #paperImg {
+        margin: $margin auto;
+        width: 50%;
+      }
     }
+  }
 }
 
 @mixin scissors($size, $margin) {
-    #scissors-wrapper {
-        width: ($size + 20px);
-        height: ($size + 20px);
-        border-radius: 50%;
-        background: linear-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
-        padding: 18px;
-        border-bottom: 8px solid hsl(39, 97%, 39%);
-        #scissors {
-            width: $size;
-            height: $size;
-            border-radius: 50%;
-            background: white;
-            text-align: center;
-            padding: 10px;
-            border-top: 5px solid #ddd;
-            #scissorsImg {
-                margin: $margin auto;
-                width: 50%;
-            }
-        }
+  #scissors-wrapper {
+    width: ($size + 20px);
+    height: ($size + 20px);
+    border-radius: 50%;
+    background: linear-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+    padding: 18px;
+    border-bottom: 8px solid hsl(39, 97%, 39%);
+    #scissors {
+      width: $size;
+      height: $size;
+      border-radius: 50%;
+      background: white;
+      text-align: center;
+      padding: 10px;
+      border-top: 5px solid #ddd;
+      #scissorsImg {
+        margin: $margin auto;
+        width: 50%;
+      }
     }
+  }
 }
 
 @mixin rock($size, $margin) {
-    #rock-wrapper {
-        width: ($size + 20px);
-        height: ($size + 20px);
-        border-radius: 50%;
-        background: linear-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
-        padding: 18px;
-        border-bottom: 8px solid hsl(349, 73%, 39%);
-        #rock {
-            width: $size;
-            height: $size;
-            border-radius: 50%;
-            background: white;
-            text-align: center;
-            padding: 10px;
-            border-top: 5px solid #ddd;
-            #rockImg {
-                margin: $margin auto;
-                width: 50%;
-            }
-        }
+  #rock-wrapper {
+    width: ($size + 20px);
+    height: ($size + 20px);
+    border-radius: 50%;
+    background: linear-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+    padding: 18px;
+    border-bottom: 8px solid hsl(349, 73%, 39%);
+    #rock {
+      width: $size;
+      height: $size;
+      border-radius: 50%;
+      background: white;
+      text-align: center;
+      padding: 10px;
+      border-top: 5px solid #ddd;
+      #rockImg {
+        margin: $margin auto;
+        width: 50%;
+      }
     }
+  }
 }
